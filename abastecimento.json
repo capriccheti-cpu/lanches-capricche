@@ -89,5 +89,17 @@
       "4": "Maisena",
       "5": "Amanteigado"
     }
+  },
+  "<Título>": {
+    "setor": "<Título>",
+    "abastecedor": "<Abastecedor>",
+    "datahora": "<DataHora>",
+    "potes": {
+      "1": "<Pote_1>",
+      "2": "<Pote_2>",
+      "3": "<Pote_3>",
+      "4": "<Pote_4>",
+      "5": "<Pote_5>"
+    }
   }
 }
