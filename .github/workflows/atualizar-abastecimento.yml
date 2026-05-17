@@ -7,38 +7,53 @@ on:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Atualizar JSON
+        env:
+          SETOR: ${{ github.event.client_payload.setor }}
+          ABASTECEDOR: ${{ github.event.client_payload.abastecedor }}
+          DATAHORA: ${{ github.event.client_payload.datahora }}
+          HORARIO: ${{ github.event.client_payload.horario }}
+          POTE1: ${{ github.event.client_payload.pote1 }}
+          POTE2: ${{ github.event.client_payload.pote2 }}
+          POTE3: ${{ github.event.client_payload.pote3 }}
+          POTE4: ${{ github.event.client_payload.pote4 }}
+          POTE5: ${{ github.event.client_payload.pote5 }}
         run: |
-          SETOR="${{ github.event.client_payload.setor }}"
-          ABASTECEDOR="${{ github.event.client_payload.abastecedor }}"
-          DATAHORA="${{ github.event.client_payload.datahora }}"
-          POTE1="${{ github.event.client_payload.pote1 }}"
-          POTE2="${{ github.event.client_payload.pote2 }}"
-          POTE3="${{ github.event.client_payload.pote3 }}"
-          POTE4="${{ github.event.client_payload.pote4 }}"
-          POTE5="${{ github.event.client_payload.pote5 }}"
-
-          cat abastecimento.json | python3 -c "
-          import json, sys
-          data = json.load(sys.stdin)
-          data['$SETOR'] = {
-            'setor': '$SETOR',
-            'abastecedor': '$ABASTECEDOR',
-            'datahora': '$DATAHORA',
-            'potes': {'1':'$POTE1','2':'$POTE2','3':'$POTE3','4':'$POTE4','5':'$POTE5'}
+          python3 << 'PYEOF'
+          import json, os
+          setor      = os.environ.get("SETOR","")
+          abast      = os.environ.get("ABASTECEDOR","")
+          datahora   = os.environ.get("DATAHORA","")
+          horario    = os.environ.get("HORARIO","")
+          p1 = os.environ.get("POTE1","")
+          p2 = os.environ.get("POTE2","")
+          p3 = os.environ.get("POTE3","")
+          p4 = os.environ.get("POTE4","")
+          p5 = os.environ.get("POTE5","")
+          with open("abastecimento.json","r",encoding="utf-8") as f:
+              data = json.load(f)
+          data[setor] = {
+              "setor": setor,
+              "abastecedor": abast,
+              "datahora": datahora,
+              "horario": horario,
+              "potes": {"1":p1,"2":p2,"3":p3,"4":p4,"5":p5}
           }
-          print(json.dumps(data, ensure_ascii=False, indent=2))
-          " > abastecimento_novo.json
-          mv abastecimento_novo.json abastecimento.json
+          with open("abastecimento.json","w",encoding="utf-8") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+          print(f"✅ Setor {setor} atualizado!")
+          PYEOF
 
       - name: Commit e Push
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add abastecimento.json
-          git commit -m "Abastecimento ${{ github.event.client_payload.setor }} ${{ github.event.client_payload.datahora }}"
+          git commit -m "Abastecimento ${{ github.event.client_payload.setor }}" || echo "Nada para commitar"
           git push
