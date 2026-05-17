@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Capricche — Estação de Lanches</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+  :root {
+    --red: #D41217;
+    --red-dark: #A50D11;
+    --gold: #F5C518;
+    --gold-dark: #C9A200;
+    --white: #FFFFFF;
+    --cream: #FFF5F5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, #F5393D 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-glow {
+    position: absolute;
+    top: -40px; left: 50%;
+    transform: translateX(-50%);
+    width: 200px; height: 120px;
+    background: radial-gradient(ellipse, rgba(245,197,24,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-inner {
+    position: relative; z-index: 1;
+    padding: 22px 20px 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .logo-heart {
+    width: 52px; height: 52px; flex-shrink: 0;
+  }
+  .logo-text {
+    font-size: 26px; font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  .logo-text span { color: var(--gold); }
+  .header-setor-badge {
+    margin-left: auto;
+    background: rgba(255,255,255,0.18);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  /* SETOR BANNER */
+  .setor-banner {
+    background: var(--gold);
+    padding: 10px 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .setor-banner-icon { font-size: 20px; }
+  .setor-banner-text {
+    font-size: 13px; font-weight: 800;
+    color: var(--red-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .setor-banner-sub {
+    font-size: 11px; color: var(--red-dark);
+    opacity: 0.75; margin-left: auto;
+  }
+
+  /* MAIN */
+  .main { flex: 1; padding: 20px 16px 32px; max-width: 480px; margin: 0 auto; width: 100%; }
+
+  /* CARD ÚLTIMO ABASTECIMENTO */
+  .card {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1.5px solid rgba(212,18,23,0.12);
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(212,18,23,0.08);
+  }
+  .card-header {
+    background: var(--red);
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card-header-icon { font-size: 16px; }
+  .card-header-title {
+    font-size: 12px; font-weight: 800;
+    color: var(--white); letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .card-header-time {
+    margin-left: auto;
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px; padding: 3px 10px;
+    font-size: 12px; font-weight: 700; color: var(--white);
+  }
+  .card-body { padding: 16px; }
+
+  /* INFO ROW */
+  .info-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(212,18,23,0.1);
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-icon { font-size: 16px; width: 22px; text-align: center; flex-shrink: 0; }
+  .info-label { font-size: 12px; color: #A50D11; font-weight: 700; width: 90px; flex-shrink: 0; }
+  .info-value { font-size: 13px; color: #2A0203; font-weight: 700; }
+
+  /* POTES GRID */
+  .potes-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    margin-top: 4px;
+  }
+  .pote-chip {
+    background: rgba(212,18,23,0.06);
+    border: 1px solid rgba(212,18,23,0.15);
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pote-num {
+    width: 26px; height: 26px; border-radius: 8px;
+    background: var(--red); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 900; flex-shrink: 0;
+  }
+  .pote-biscuit { font-size: 12px; font-weight: 700; color: #2A0203; line-height: 1.3; }
+
+  /* STATUS PILL */
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(212,18,23,0.08);
+    border: 1px solid rgba(212,18,23,0.2);
+    border-radius: 20px; padding: 5px 12px;
+    font-size: 11px; font-weight: 700; color: var(--red-dark);
+    margin-bottom: 14px;
+  }
+  .status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #22c55e;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* LOADING */
+  .loading {
+    text-align: center; padding: 48px 20px;
+  }
+  .loading-spinner {
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 4px solid rgba(212,18,23,0.15);
+    border-top-color: var(--red);
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading p { color: var(--red-dark); font-weight: 700; font-size: 14px; }
+
+  /* ERRO */
+  .error-box {
+    background: #FFF0F0; border: 1.5px solid var(--red);
+    border-radius: 16px; padding: 24px; text-align: center;
+  }
+  .error-box p { color: var(--red-dark); font-weight: 700; }
+  .error-box small { color: #A50D11; font-size: 12px; display: block; margin-top: 6px; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--red-dark);
+    padding: 14px 20px;
+    text-align: center;
+  }
+  .footer p { color: rgba(255,255,255,0.6); font-size: 11px; }
+  .footer strong { color: var(--gold); }
+
+  /* AVISO QR FIXO */
+  .qr-fixo-notice {
+    background: rgba(245,197,24,0.12);
+    border: 1px solid var(--gold);
+    border-radius: 12px; padding: 10px 14px;
+    margin-bottom: 16px;
+    display: flex; align-items: flex-start; gap: 8px;
+  }
+  .qr-fixo-notice span { font-size: 11px; color: var(--gold-dark); font-weight: 700; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-glow"></div>
+  <div class="header-inner">
+    <!-- Logo SVG coração Capricche -->
+    <svg class="logo-heart" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26 46s-20-12.5-20-26C6 13.1 11.5 8 18 8c3.5 0 6.6 1.6 8 4 1.4-2.4 4.5-4 8-4 6.5 0 12 5.1 12 12C46 33.5 26 46 26 46z" fill="white" fill-opacity="0.25"/>
+      <path d="M26 44s-18-11.5-18-24C8 13.7 13 9 19 9c3.3 0 6.2 1.5 7 3.5C26.8 10.5 29.7 9 33 9c6 0 11 4.7 11 11C44 32.5 26 44 26 44z" fill="white" fill-opacity="0.4"/>
+      <!-- Sol dourado no topo -->
+      <circle cx="26" cy="14" r="5" fill="#F5C518"/>
+      <line x1="26" y1="6" x2="26" y2="4" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+      <line x1="33" y1="8" x2="34.5" y2="6.5" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+      <line x1="36" y1="14" x2="38" y2="14" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div class="logo-text">Capric<span>che</span></div>
+    <div class="header-setor-badge" id="header-setor">...</div>
+  </div>
+</div>
+
+<div class="setor-banner" id="setor-banner">
+  <span class="setor-banner-icon">🍪</span>
+  <span class="setor-banner-text" id="banner-setor-nome">Carregando...</span>
+  <span class="setor-banner-sub" id="banner-data">—</span>
+</div>
+
+<div class="main">
+
+  <div class="status-pill">
+    <div class="status-dot"></div>
+    Informações em tempo real
+  </div>
+
+  <div class="qr-fixo-notice">
+    <span>📌</span>
+    <span>Este QR Code é <strong>fixo e permanente</strong> para este setor. As informações abaixo são sempre atualizadas a cada novo abastecimento.</span>
+  </div>
+
+  <div id="conteudo">
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <p>Buscando abastecimento...</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Estações de Lanches · <strong>Capricche</strong></p>
+  <p style="margin-top:3px">Dados atualizados automaticamente via Power Automate</p>
+</div>
+
+<script>
+  // ==============================================================
+  // CONFIGURAÇÃO — altere apenas estas duas linhas:
+  // ==============================================================
+  const GITHUB_USER  = "capriccheti-cpu";          // ex: "capricche"
+  const GITHUB_REPO  = "lanches-capricche";      // ex: "lanches-data"
+  const JSON_FILE    = "abastecimento.json";
+  // ==============================================================
+
+  const RAW_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${JSON_FILE}`;
+
+  // Pega o setor da URL: ?setor=ADM  ou  /ADM
+  function getSetor() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("setor")) return params.get("setor");
+    const path = window.location.pathname.split("/").filter(Boolean);
+    return path[path.length - 1] || null;
+  }
+
+  const SETOR_KEY = getSetor();
+
+  function formatData(iso) {
+    if (!iso) return "—";
+    const [y,m,d] = iso.split("-");
+    return `${d}/${m}/${y}`;
+  }
+
+  function renderDados(dados) {
+    const d = dados[SETOR_KEY] || dados[Object.keys(dados)[0]];
+    if (!d) {
+      document.getElementById("conteudo").innerHTML = `
+        <div class="error-box">
+          <p>⚠️ Setor não encontrado</p>
+          <small>Verifique o QR Code ou procure o responsável.</small>
+        </div>`;
+      return;
+    }
+
+    document.getElementById("header-setor").textContent = d.setor;
+    document.getElementById("banner-setor-nome").textContent = "Estação · " + d.setor;
+    document.getElementById("banner-data").textContent = formatData(d.data);
+
+    const potesHTML = Object.entries(d.potes).map(([num, biscuit]) => `
+      <div class="pote-chip">
+        <div class="pote-num">${num}</div>
+        <div class="pote-biscuit">${biscuit}</div>
+      </div>`).join("");
+
+    document.getElementById("conteudo").innerHTML = `
+      <div class="card">
+        <div class="card-header">
+          <span class="card-header-icon">🕐</span>
+          <span class="card-header-title">Último abastecimento</span>
+          <span class="card-header-time">${d.horario}</span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-icon">👤</span>
+            <span class="info-label">Abastecedor</span>
+            <span class="info-value">${d.abastecedor}</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">📅</span>
+            <span class="info-label">Data</span>
+            <span class="info-value">${formatData(d.data)}</span>
+          </div>
+          <div class="info-row">
+            <span class="info-icon">🕐</span>
+            <span class="info-label">Horário</span>
+            <span class="info-value">${d.horario}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-header-icon">🍪</span>
+          <span class="card-header-title">Biscoitos nos potes</span>
+        </div>
+        <div class="card-body">
+          <div class="potes-grid">${potesHTML}</div>
+        </div>
+      </div>`;
+  }
+
+  async function carregarDados() {
+    try {
+      // Adiciona timestamp para evitar cache do browser
+      const res = await fetch(RAW_URL + "?t=" + Date.now());
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const dados = await res.json();
+      renderDados(dados);
+    } catch (e) {
+      document.getElementById("conteudo").innerHTML = `
+        <div class="error-box">
+          <p>⚠️ Não foi possível carregar os dados</p>
+          <small>Verifique sua conexão ou tente novamente em instantes.<br/>${e.message}</small>
+        </div>`;
+    }
+  }
+
+  carregarDados();
+  // Atualiza automaticamente a cada 60 segundos
+  setInterval(carregarDados, 60000);
+</script>
+</body>
+</html>
