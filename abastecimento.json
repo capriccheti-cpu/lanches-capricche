@@ -1,0 +1,93 @@
+{
+  "ADM": {
+    "setor": "ADM",
+    "abastecedor": "João Silva",
+    "horario": "14:32",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Cream Cracker",
+      "2": "Maria",
+      "3": "Maisena",
+      "4": "Recheado Chocolate",
+      "5": "Água e Sal"
+    }
+  },
+  "RH": {
+    "setor": "RH",
+    "abastecedor": "Maria Souza",
+    "horario": "09:15",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Wafer",
+      "2": "Amanteigado",
+      "3": "Rosquinha",
+      "4": "Integral",
+      "5": "Maria"
+    }
+  },
+  "Producao": {
+    "setor": "Produção",
+    "abastecedor": "Carlos Lima",
+    "horario": "10:00",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Cream Cracker",
+      "2": "Maisena",
+      "3": "Recheado Morango",
+      "4": "Wafer",
+      "5": "Amanteigado"
+    }
+  },
+  "PAF": {
+    "setor": "PAF",
+    "abastecedor": "Ana Ferreira",
+    "horario": "11:45",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Maria",
+      "2": "Rosquinha",
+      "3": "Integral",
+      "4": "Cream Cracker",
+      "5": "Recheado Chocolate"
+    }
+  },
+  "Expedicao": {
+    "setor": "Expedição",
+    "abastecedor": "Pedro Alves",
+    "horario": "13:20",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Maisena",
+      "2": "Água e Sal",
+      "3": "Amanteigado",
+      "4": "Maria",
+      "5": "Wafer"
+    }
+  },
+  "Industrial": {
+    "setor": "Industrial",
+    "abastecedor": "Fernanda Costa",
+    "horario": "08:50",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Recheado Morango",
+      "2": "Cream Cracker",
+      "3": "Maria",
+      "4": "Rosquinha",
+      "5": "Integral"
+    }
+  },
+  "Estoque": {
+    "setor": "Estoque",
+    "abastecedor": "Lucas Mendes",
+    "horario": "07:30",
+    "data": "2025-05-15",
+    "potes": {
+      "1": "Integral",
+      "2": "Wafer",
+      "3": "Cream Cracker",
+      "4": "Maisena",
+      "5": "Amanteigado"
+    }
+  }
+}
