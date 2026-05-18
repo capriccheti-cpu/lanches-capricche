@@ -17,5 +17,18 @@
   "PAF": {},
   "Expedicao": {},
   "Industrial": {},
-  "Estoque": {}
+  "Estoque": {},
+  "Produção": {
+    "setor": "Produção",
+    "abastecedor": "",
+    "datahora": "",
+    "horario": "",
+    "potes": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
+  }
 }
