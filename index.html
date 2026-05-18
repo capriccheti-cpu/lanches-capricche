@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Capricche — Estação de Lanches</title>
+<style>
+  body{font-family:Arial,sans-serif;margin:0;background:#fff5f5;}
+  .header{background:#D41217;padding:16px 20px;display:flex;align-items:center;gap:12px;}
+  .header h1{color:white;font-size:20px;margin:0;}
+  .badge{background:#F5C518;color:#7A0A0D;font-weight:bold;padding:4px 14px;border-radius:20px;font-size:13px;margin-left:auto;}
+  .banner{background:#F5C518;padding:10px 20px;font-weight:bold;color:#A50D11;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+  .container{max-width:480px;margin:20px auto;padding:0 16px 40px;}
+  .card{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);overflow:hidden;margin-bottom:16px;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .card-title{background:#D41217;color:white;padding:10px 16px;font-weight:bold;font-size:13px;text-transform:uppercase;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center;}
+  .card-body{padding:16px;}
+  .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(212,18,23,0.12);font-size:14px;}
+  .row:last-child{border-bottom:none;}
+  .row span:first-child{color:#A50D11;font-weight:bold;}
+  .row span:last-child{color:#2A0203;font-weight:bold;}
+  .potes{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .pote{display:flex;align-items:center;gap:8px;background:rgba(212,18,23,0.06);border-radius:8px;padding:8px 10px;}
+  .pote-num{background:#D41217;color:white;width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;}
+  .pote-nome{font-size:13px;font-weight:bold;color:#2A0203;}
+  .aguardando{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);padding:40px 20px;text-align:center;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .aguardando .emoji{font-size:48px;margin-bottom:16px;}
+  .aguardando h2{color:#D41217;font-size:18px;margin:0 0 8px;}
+  .aguardando p{color:#A50D11;font-size:14px;margin:0;opacity:0.8;}
+  .loading{text-align:center;padding:40px;color:#A50D11;font-weight:bold;}
+  .erro{background:#fff0f0;border:1px solid #D41217;border-radius:10px;padding:20px;text-align:center;color:#A50D11;}
+  .footer{text-align:center;padding:16px;background:#A50D11;color:rgba(255,255,255,0.7);font-size:12px;}
+  .footer strong{color:#F5C518;}
+  .ultima-atualizacao{font-size:11px;color:#A50D11;text-align:center;margin-bottom:12px;opacity:0.7;}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🍪 Capricche</h1>
+  <div class="badge" id="badge-setor">...</div>
+</div>
+<div class="banner" id="banner-setor">Carregando...</div>
+<div class="container">
+  <div class="ultima-atualizacao" id="ultima-atualizacao"></div>
+  <div id="conteudo"><div class="loading">Buscando dados...</div></div>
+</div>
+<div class="footer">
+  <p>Estações de Lanches · <strong>Capricche</strong></p>
+  <p>Atualizado automaticamente a cada abastecimento</p>
+</div>
+<script>
+  const RAW_URL="https://raw.githubusercontent.com/capriccheti-cpu/lanches-capricche/main/abastecimento.json";
+  const SETOR=new URLSearchParams(window.location.search).get("setor")||"ADM";
+
+  function dadosValidos(d){
+    if(!d) return false;
+    if(!d.abastecedor) return false;
+    if(d.abastecedor.includes("<")) return false;
+    if(d.setor && d.setor.includes("<")) return false;
+    return true;
+  }
+
+  function formatarData(str){
+    if(!str) return "—";
+    try{
+      // Se vier no formato ISO completo
+      if(str.includes("T")){
+        const d=new Date(str);
+        return d.toLocaleDateString("pt-BR");
+      }
+      // Se vier no formato yyyy-mm-dd
+      if(str.includes("-")){
+        const [y,m,dia]=str.split("-");
+        return `${dia}/${m}/${y}`;
+      }
+      return str;
+    }catch(e){return str;}
+  }
+
+  async function carregar(){
+    try{
+      const res=await fetch(RAW_URL+"?t="+Date.now());
+      if(!res.ok) throw new Error("Erro "+res.status);
+      const dados=await res.json();
+      const d=dados[SETOR];
+
+      document.getElementById("badge-setor").textContent=SETOR;
+      document.getElementById("banner-setor").textContent="🍪 Estação · "+SETOR;
+      document.getElementById("ultima-atualizacao").textContent=
+        "Última verificação: "+new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+
+      // Setor sem dados válidos — mostra mensagem amigável
+      if(!dadosValidos(d)){
+        document.getElementById("conteudo").innerHTML=`
+          <div class="aguardando">
+            <div class="emoji">🕐</div>
+            <h2>Olá!</h2>
+            <p>Ainda estamos aguardando o abastecimento!</p>
+          </div>`;
+        return;
+      }
+
+      const potes=d.potes||{};
+      const potesHTML=[1,2,3,4,5].map(n=>`
+        <div class="pote">
+          <div class="pote-num">${n}</div>
+          <div class="pote-nome">${potes[n]||potes[String(n)]||"—"}</div>
+        </div>`).join("");
+
+      document.getElementById("conteudo").innerHTML=`
+        <div class="card">
+          <div class="card-title">
+            <span>🕐 Último Abastecimento</span>
+            <span>${d.horario||"—"}</span>
+          </div>
+          <div class="card-body">
+            <div class="row"><span>Abastecedor</span><span>${d.abastecedor||"—"}</span></div>
+            <div class="row"><span>Data</span><span>${formatarData(d.datahora||d.data)}</span></div>
+            <div class="row"><span>Horário</span><span>${d.horario||"—"}</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span>🍪 Biscoitos nos Potes</span></div>
+          <div class="card-body"><div class="potes">${potesHTML}</div></div>
+        </div>`;
+
+    }catch(e){
+      document.getElementById("conteudo").innerHTML=`
+        <div class="erro"><p>⚠️ Não foi possível carregar os dados.</p><p style="font-size:12px;margin-top:6px">${e.message}</p></div>`;
+    }
+  }
+
+  // Carrega imediatamente
+  carregar();
+  // Atualiza a cada 30 segundos — independente de outras abas
+  setInterval(carregar, 30000);
+
+  // Atualiza quando a aba volta a ficar visível
+  document.addEventListener("visibilitychange", function(){
+    if(document.visibilityState === "visible") carregar();
+  });
+</script>
+</body>
+</html>
