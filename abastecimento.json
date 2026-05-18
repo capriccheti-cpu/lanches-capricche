@@ -52,15 +52,15 @@
     }
   },
   "Expedicao": {
-    "setor": "Expedição",
-    "abastecedor": "Pedro Alves",
-    "horario": "13:20",
-    "data": "2025-05-15",
+    "setor": "Expedicao",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
+    "horario": "",
     "potes": {
-      "1": "Maisena",
-      "2": "Água e Sal",
-      "3": "Amanteigado",
-      "4": "Maria",
+      "1": "Wafer",
+      "2": "Wafer",
+      "3": "Maisena",
+      "4": "Wafer",
       "5": "Wafer"
     }
   },
