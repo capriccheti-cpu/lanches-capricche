@@ -20,15 +20,15 @@
   "Estoque": {},
   "Produção": {
     "setor": "Produção",
-    "abastecedor": "",
-    "datahora": "",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
     "horario": "",
     "potes": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "Amanteigado",
+      "2": "Amanteigado",
+      "3": "Amanteigado",
+      "4": "Amanteigado",
+      "5": "Amanteigado"
     }
   }
 }
