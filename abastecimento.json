@@ -40,15 +40,15 @@
   },
   "PAF": {
     "setor": "PAF",
-    "abastecedor": "Ana Ferreira",
-    "horario": "11:45",
-    "data": "2025-05-15",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
+    "horario": "",
     "potes": {
-      "1": "Maria",
-      "2": "Rosquinha",
-      "3": "Integral",
-      "4": "Cream Cracker",
-      "5": "Recheado Chocolate"
+      "1": "Wafer",
+      "2": "Wafer",
+      "3": "Wafer",
+      "4": "Wafer",
+      "5": "Wafer"
     }
   },
   "Expedicao": {
