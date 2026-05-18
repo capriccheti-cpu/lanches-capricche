@@ -66,15 +66,15 @@
   },
   "Industrial": {
     "setor": "Industrial",
-    "abastecedor": "Fernanda Costa",
-    "horario": "08:50",
-    "data": "2025-05-15",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
+    "horario": "",
     "potes": {
-      "1": "Recheado Morango",
-      "2": "Cream Cracker",
-      "3": "Maria",
-      "4": "Rosquinha",
-      "5": "Integral"
+      "1": "Recheado Chocolate",
+      "2": "Recheado Chocolate",
+      "3": "Recheado Chocolate",
+      "4": "Recheado Chocolate",
+      "5": "Wafer"
     }
   },
   "Estoque": {
