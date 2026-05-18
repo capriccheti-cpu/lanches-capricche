@@ -1,5 +1,17 @@
 {
-  "ADM": {},
+  "ADM": {
+    "setor": "ADM",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
+    "horario": "",
+    "potes": {
+      "1": "Amanteigado",
+      "2": "Amanteigado",
+      "3": "Maisena",
+      "4": "Maisena",
+      "5": "Wafer"
+    }
+  },
   "RH": {},
   "Producao": {},
   "PAF": {},
