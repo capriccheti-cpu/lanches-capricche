@@ -15,7 +15,19 @@
   "RH": {},
   "Producao": {},
   "PAF": {},
-  "Expedicao": {},
+  "Expedicao": {
+    "setor": "Expedicao",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-17",
+    "horario": "",
+    "potes": {
+      "1": "Cream Cracker",
+      "2": "Cream Cracker",
+      "3": "Cream Cracker",
+      "4": "Cream Cracker",
+      "5": "Cream Cracker"
+    }
+  },
   "Industrial": {},
   "Estoque": {},
   "Produção": {
