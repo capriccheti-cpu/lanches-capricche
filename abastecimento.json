@@ -12,7 +12,19 @@
       "5": "Amanteigado"
     }
   },
-  "RH": {},
+  "RH": {
+    "setor": "RH",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-18",
+    "horario": "",
+    "potes": {
+      "1": "Wafer",
+      "2": "Maria",
+      "3": "Wafer",
+      "4": "Wafer",
+      "5": "Wafer"
+    }
+  },
   "Producao": {},
   "PAF": {},
   "Expedicao": {
