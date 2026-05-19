@@ -28,7 +28,19 @@
       "5": "Cream Cracker"
     }
   },
-  "Industrial": {},
+  "Industrial": {
+    "setor": "Industrial",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-05-18",
+    "horario": "",
+    "potes": {
+      "1": "Wafer",
+      "2": "Wafer",
+      "3": "Wafer",
+      "4": "Wafer",
+      "5": "Wafer"
+    }
+  },
   "Estoque": {},
   "Produção": {
     "setor": "Produção",
