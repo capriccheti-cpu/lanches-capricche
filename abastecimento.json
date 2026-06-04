@@ -91,5 +91,18 @@
       "4": "Maria",
       "5": "Maria"
     }
+  },
+  "Central de Resíduos": {
+    "setor": "Central de Resíduos",
+    "abastecedor": "",
+    "datahora": "2026-06-03",
+    "horario": "",
+    "potes": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
   }
 }
