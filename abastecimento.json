@@ -104,5 +104,18 @@
       "4": "",
       "5": ""
     }
+  },
+  "Motoristas": {
+    "setor": "Motoristas",
+    "abastecedor": "",
+    "datahora": "2026-06-03",
+    "horario": "",
+    "potes": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
   }
 }
