@@ -8,7 +8,6 @@
   body{font-family:Arial,sans-serif;margin:0;background:#fff5f5;}
   .header{background:#D41217;padding:16px 20px;display:flex;align-items:center;gap:12px;}
   .header h1{color:white;font-size:20px;margin:0;}
-  .badge{background:#F5C518;color:#7A0A0D;font-weight:bold;padding:4px 14px;border-radius:20px;font-size:13px;margin-left:auto;}
   .banner{background:#F5C518;padding:10px 20px;font-weight:bold;color:#A50D11;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
   .container{max-width:480px;margin:20px auto;padding:0 16px 40px;}
   .card{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);overflow:hidden;margin-bottom:16px;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
@@ -37,7 +36,6 @@
 <body>
 <div class="header">
   <h1>🍪 Capricche</h1>
-  <div class="badge" id="badge-setor">...</div>
 </div>
 <div class="banner" id="banner-setor">Carregando...</div>
 <div class="container">
@@ -50,14 +48,14 @@
 <script>
   const RAW_URL="https://raw.githubusercontent.com/capriccheti-cpu/lanches-capricche/main/abastecimento.json";
   const SETOR=new URLSearchParams(window.location.search).get("setor")||"ADM";
- 
+
   function dadosValidos(d){
     if(!d) return false;
     if(!d.abastecedor) return false;
     if(d.abastecedor.includes("<")) return false;
     return true;
   }
- 
+
   function formatarData(str){
     if(!str) return "—";
     try{
@@ -72,17 +70,16 @@
       return str;
     }catch(e){return str;}
   }
- 
+
   async function carregar(){
     try{
       const res=await fetch(RAW_URL+"?t="+Date.now());
       if(!res.ok) throw new Error("Erro "+res.status);
       const dados=await res.json();
       const d=dados[SETOR];
- 
-      document.getElementById("badge-setor").textContent=SETOR;
+
       document.getElementById("banner-setor").textContent="🍪 Estação · "+SETOR;
- 
+
       if(!dadosValidos(d)){
         document.getElementById("conteudo").innerHTML=`
           <div class="aguardando">
@@ -92,18 +89,21 @@
           </div>`;
         return;
       }
- 
+
       const potes=d.potes||{};
+      const linhas=(d.linhas||{});
+      const horas=(d.horas||{});
+
       const potesHTML=[1,2,3,4,5].map(n=>`
         <div class="pote">
           <div class="pote-num">${n}</div>
           <div class="pote-nome">${potes[n]||potes[String(n)]||"—"}</div>
         </div>`).join("");
- 
+
       document.getElementById("conteudo").innerHTML=`
         <div class="card">
           <div class="card-title">
-            <span>📋 Abastecimento · ${SETOR}</span>
+            <span>📋 Abastecimento</span>
             <span>${d.horario||"—"}</span>
           </div>
           <div class="card-body">
@@ -115,13 +115,13 @@
             <div class="potes">${potesHTML}</div>
           </div>
         </div>`;
- 
+
     }catch(e){
       document.getElementById("conteudo").innerHTML=`
         <div class="erro"><p>⚠️ Não foi possível carregar os dados.</p><p style="font-size:12px;margin-top:6px">${e.message}</p></div>`;
     }
   }
- 
+
   carregar();
   setInterval(carregar, 30000);
   document.addEventListener("visibilitychange",function(){
