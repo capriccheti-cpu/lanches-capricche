@@ -15,14 +15,14 @@
   "RH": {
     "setor": "RH",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-05-18",
+    "datahora": "2026-06-08",
     "horario": "",
     "potes": {
-      "1": "Wafer",
+      "1": "Maisena",
       "2": "Maria",
-      "3": "Wafer",
-      "4": "Wafer",
-      "5": "Wafer"
+      "3": "Maria",
+      "4": "Maria",
+      "5": "Maisena"
     }
   },
   "Producao": {},
