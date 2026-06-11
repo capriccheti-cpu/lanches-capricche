@@ -1,19 +1,17 @@
-
 {
   "ADM": {
     "setor": "ADM",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-10",
+    "datahora": "2026-06-11",
     "horario": "",
     "potes": {
-      "1": { "produto": "Cream Cracker", "linha": "Linha01" },
-      "2": { "produto": "Maria", "linha": "Linha02" },
-      "3": { "produto": "Maisena", "linha": "Linha03" },
-      "4": { "produto": "Amanteigado", "linha": "Linha04" },
-      "5": { "produto": "Amanteigado", "linha": "Linha05" }
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
     }
   },
-
   "RH": {
     "setor": "RH",
     "abastecedor": "Augusto Monte da Silva",
