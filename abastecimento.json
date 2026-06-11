@@ -29,14 +29,14 @@
   "PAF": {
     "setor": "PAF",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-08",
+    "datahora": "2026-06-11",
     "horario": "",
     "potes": {
-      "1": "Maria",
+      "1": "Cream Cracker",
       "2": "Maria",
-      "3": "Maria",
-      "4": "Maria",
-      "5": "Maria"
+      "3": "Maisena",
+      "4": "Amanteigado",
+      "5": "Wafer"
     }
   },
   "Expedicao": {
