@@ -73,14 +73,20 @@
   "Industrial": {
     "setor": "Industrial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-05-18",
-    "horario": "",
+    "datahora": "2026-06-12",
     "potes": {
       "1": "Maria",
-      "2": "Maria",
-      "3": "Wafer",
-      "4": "Wafer",
-      "5": "Wafer"
+      "2": "Cream Cracker",
+      "3": "Cream Cracker",
+      "4": "Cream Cracker",
+      "5": "Cream Cracker"
+    },
+    "linhas": {
+      "1": "Linha05",
+      "2": "Linha01",
+      "3": "Linha01",
+      "4": "Linha01",
+      "5": "Linha01"
     }
   },
   "Estoque": {},
