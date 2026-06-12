@@ -131,15 +131,21 @@
   },
   "Motoristas": {
     "setor": "Motoristas",
-    "abastecedor": "",
-    "datahora": "2026-06-03",
-    "horario": "",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-06-12",
     "potes": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "Maisena",
+      "2": "Maisena",
+      "3": "Maisena",
+      "4": "Maisena",
+      "5": "Maisena"
+    },
+    "linhas": {
+      "1": "LinhaW01",
+      "2": "LinhaW01",
+      "3": "LinhaW01",
+      "4": "LinhaW01",
+      "5": "LinhaW01"
     }
   },
   "Central de Residuos": {
