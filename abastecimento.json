@@ -141,5 +141,24 @@
       "4": "",
       "5": ""
     }
+  },
+  "Central de Residuos": {
+    "setor": "Central de Residuos",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-06-12",
+    "potes": {
+      "1": "Maisena",
+      "2": "Maisena",
+      "3": "Maisena",
+      "4": "Maisena",
+      "5": "Maisena"
+    },
+    "linhas": {
+      "1": "Linha02",
+      "2": "Linha02",
+      "3": "Linha02",
+      "4": "Linha02",
+      "5": "Linha02"
+    }
   }
 }
