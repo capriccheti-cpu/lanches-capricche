@@ -18,43 +18,37 @@ jobs:
           SETOR: ${{ github.event.client_payload.setor }}
           ABASTECEDOR: ${{ github.event.client_payload.abastecedor }}
           DATAHORA: ${{ github.event.client_payload.datahora }}
-          POTE1: ${{ github.event.client_payload.pote1 }}
-          POTE2: ${{ github.event.client_payload.pote2 }}
-          POTE3: ${{ github.event.client_payload.pote3 }}
-          POTE4: ${{ github.event.client_payload.pote4 }}
-          POTE5: ${{ github.event.client_payload.pote5 }}
-          LINHA1: ${{ github.event.client_payload.linha1 }}
-          LINHA2: ${{ github.event.client_payload.linha2 }}
-          LINHA3: ${{ github.event.client_payload.linha3 }}
-          LINHA4: ${{ github.event.client_payload.linha4 }}
-          LINHA5: ${{ github.event.client_payload.linha5 }}
+          POTES: ${{ github.event.client_payload.potes }}
+          LINHAS: ${{ github.event.client_payload.linhas }}
         run: |
           python3 << 'PYEOF'
           import json, os
-          setor      = os.environ.get("SETOR","")
-          abast      = os.environ.get("ABASTECEDOR","")
-          datahora   = os.environ.get("DATAHORA","")
-          p1 = os.environ.get("POTE1","")
-          p2 = os.environ.get("POTE2","")
-          p3 = os.environ.get("POTE3","")
-          p4 = os.environ.get("POTE4","")
-          p5 = os.environ.get("POTE5","")
-          l1 = os.environ.get("LINHA1","")
-          l2 = os.environ.get("LINHA2","")
-          l3 = os.environ.get("LINHA3","")
-          l4 = os.environ.get("LINHA4","")
-          l5 = os.environ.get("LINHA5","")
+          setor    = os.environ.get("SETOR","")
+          abast    = os.environ.get("ABASTECEDOR","")
+          datahora = os.environ.get("DATAHORA","")
+          potes_str  = os.environ.get("POTES","")
+          linhas_str = os.environ.get("LINHAS","")
+
+          potes_lista  = potes_str.split("|")
+          linhas_lista = linhas_str.split("|")
+
+          potes  = {str(i+1): potes_lista[i].strip() if i < len(potes_lista) else "" for i in range(5)}
+          linhas = {str(i+1): linhas_lista[i].strip() if i < len(linhas_lista) else "" for i in range(5)}
+
           with open("abastecimento.json","r",encoding="utf-8") as f:
               data = json.load(f)
+
           data[setor] = {
               "setor": setor,
               "abastecedor": abast,
               "datahora": datahora,
-              "potes": {"1":p1,"2":p2,"3":p3,"4":p4,"5":p5},
-              "linhas": {"1":l1,"2":l2,"3":l3,"4":l4,"5":l5}
+              "potes": potes,
+              "linhas": linhas
           }
+
           with open("abastecimento.json","w",encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent=2)
+
           print(f"✅ Setor {setor} atualizado!")
           PYEOF
 
