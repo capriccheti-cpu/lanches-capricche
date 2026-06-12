@@ -87,14 +87,20 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-05-27",
-    "horario": "",
+    "datahora": "2026-06-12",
     "potes": {
-      "1": "Amanteigado",
-      "2": "Amanteigado",
-      "3": "Amanteigado",
-      "4": "Amanteigado",
-      "5": "Amanteigado"
+      "1": "Cream Cracker",
+      "2": "Cream Cracker",
+      "3": "Cream Cracker",
+      "4": "Cream Cracker",
+      "5": "Cream Cracker"
+    },
+    "linhas": {
+      "1": "Linha01",
+      "2": "Linha01",
+      "3": "Linha01",
+      "4": "Linha01",
+      "5": "Linha01"
     }
   },
   "Obras": {
