@@ -3,8 +3,14 @@
     "setor": "ADM",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-06-11",
-    "horario": "",
     "potes": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
       "1": "",
       "2": "",
       "3": "",
