@@ -93,12 +93,16 @@
         return;
       }
 
-      const potes=d.potes||{};
-      const linhas=d.linhas||{};
+      // potes e linhas podem vir como objeto {1:..,2:..} ou string "a|b|c|d|e"
+      let potes=d.potes||{};
+      let linhas=d.linhas||{};
+      if(typeof potes==="string") potes=potes.split("|");
+      if(typeof linhas==="string") linhas=linhas.split("|");
 
       const potesHTML=[1,2,3,4,5].map(n=>{
-        const biscoito=potes[n]||potes[String(n)]||"—";
-        const linha=linhas[n]||linhas[String(n)]||"";
+        const idx=n-1;
+        const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"—";
+        const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
         return `
           <div class="pote">
             <div class="pote-num">${n}</div>
