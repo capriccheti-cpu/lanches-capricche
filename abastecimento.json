@@ -41,19 +41,19 @@
   "PAF": {
     "setor": "PAF",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-11",
+    "datahora": "2026-06-15",
     "potes": {
       "1": "Maria",
-      "2": "Amanteigado",
-      "3": "Wafer",
-      "4": "Wafer",
-      "5": "Wafer"
+      "2": "Maria",
+      "3": "Maria",
+      "4": "Maria",
+      "5": "Maria"
     },
     "linhas": {
-      "1": "Linha02",
+      "1": "Linha01",
       "2": "Linha01",
       "3": "LinhaW01",
-      "4": "LinhaW02",
+      "4": "LinhaW01",
       "5": "LinhaW01"
     }
   },
