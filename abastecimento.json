@@ -93,17 +93,17 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-12",
+    "datahora": "2026-06-17",
     "potes": {
-      "1": "Cream Cracker",
-      "2": "Cream Cracker",
+      "1": "Maria",
+      "2": "Maria",
       "3": "Cream Cracker",
       "4": "Cream Cracker",
       "5": "Cream Cracker"
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha01",
+      "1": "Linha02",
+      "2": "Linha03",
       "3": "Linha01",
       "4": "Linha01",
       "5": "Linha01"
