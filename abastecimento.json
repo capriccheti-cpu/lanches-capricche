@@ -20,21 +20,21 @@
   },
   "RH": {
     "setor": "RH",
-    "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-30",
+    "abastecedor": "Abastecimento Lanches",
+    "datahora": "2026-07-03",
     "potes": {
-      "1": "Cream Cracker",
-      "2": "Cream Cracker",
-      "3": "Cream Cracker",
-      "4": "Maria",
-      "5": "Recheado Chocolate"
+      "1": "ROSQUINHA CAPPUCCINO CAPRICCHE 10x280g",
+      "2": "MAMMAMIA RECHEADO BACON 21X93,3g",
+      "3": "AMANTEIGADO CHOCOLATE CAPRICCHE 30x24g",
+      "4": "WAFER LIMAO FUTURINHOS 40X28g",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha01",
-      "3": "Linha01",
-      "4": "Linha03",
-      "5": "LinhaW01"
+      "1": "LinhaW01",
+      "2": "LinhaW01",
+      "3": "Linha05",
+      "4": "Linha04",
+      "5": ""
     }
   },
   "Producao": {},
