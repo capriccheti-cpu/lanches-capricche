@@ -26,6 +26,7 @@
   .pote-nome{font-size:13px;font-weight:bold;color:#2A0203;}
   .pote-linha{font-size:11px;color:#A50D11;font-weight:600;flex-shrink:0;white-space:nowrap;}
   .pote-linha::before{content:"🏭 ";}
+  .sem-potes{text-align:center;padding:16px;color:#A50D11;font-size:13px;opacity:0.75;}
   .aguardando{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);padding:40px 20px;text-align:center;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
   .aguardando .emoji{font-size:48px;margin-bottom:16px;}
   .aguardando h2{color:#D41217;font-size:18px;margin:0 0 8px;}
@@ -74,6 +75,13 @@
     }catch(e){return str;}
   }
 
+  // Verifica se um pote tem conteúdo válido (ignora vazio, "-" e "—")
+  function poteTemConteudo(valor){
+    if(!valor) return false;
+    const v=String(valor).trim();
+    return v!=="" && v!=="-" && v!=="—";
+  }
+
   async function carregar(){
     try{
       const res=await fetch(RAW_URL+"?t="+Date.now());
@@ -99,19 +107,26 @@
       if(typeof potes==="string") potes=potes.split("|");
       if(typeof linhas==="string") linhas=linhas.split("|");
 
-      const potesHTML=[1,2,3,4,5].map(n=>{
-        const idx=n-1;
-        const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"—";
-        const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
-        return `
+      // Monta a lista de potes preenchidos (1 a 5) e filtra os vazios
+      const potesPreenchidos=[1,2,3,4,5]
+        .map(n=>{
+          const idx=n-1;
+          const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"";
+          const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
+          return {n, biscoito, linha};
+        })
+        .filter(p=>poteTemConteudo(p.biscoito));
+
+      const potesHTML=potesPreenchidos.length
+        ? potesPreenchidos.map(p=>`
           <div class="pote">
-            <div class="pote-num">${n}</div>
+            <div class="pote-num">${p.n}</div>
             <div class="pote-info">
-              <span class="pote-nome">${biscoito}</span>
-              ${linha?`<span class="pote-linha">${linha}</span>`:""}
+              <span class="pote-nome">${p.biscoito}</span>
+              ${p.linha?`<span class="pote-linha">${p.linha}</span>`:""}
             </div>
-          </div>`;
-      }).join("");
+          </div>`).join("")
+        : `<div class="sem-potes">Nenhum pote abastecido no momento.</div>`;
 
       document.getElementById("conteudo").innerHTML=`
         <div class="card">
