@@ -78,21 +78,21 @@
   },
   "Industrial": {
     "setor": "Industrial",
-    "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-12",
+    "abastecedor": "Abastecimento Lanches",
+    "datahora": "2026-07-03",
     "potes": {
-      "1": "Cream Cracker",
-      "2": "Cream Cracker",
-      "3": "Cream Cracker",
-      "4": "Cream Cracker",
-      "5": "Cream Cracker"
+      "1": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
+      "2": "MAMMAMIA RECH REQUEIJAO 21X93,3g",
+      "3": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "4": "",
+      "5": ""
     },
     "linhas": {
       "1": "Linha01",
-      "2": "Linha01",
-      "3": "Linha01",
-      "4": "Linha01",
-      "5": "Linha01"
+      "2": "Linha03",
+      "3": "Linha05",
+      "4": "",
+      "5": ""
     }
   },
   "Estoque": {},
