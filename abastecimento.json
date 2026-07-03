@@ -23,17 +23,17 @@
     "abastecedor": "Abastecimento Lanches",
     "datahora": "2026-07-03",
     "potes": {
-      "1": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
-      "2": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
-      "3": "MAMMAMIA RECHEADO BACON 21X93,3g",
-      "4": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "1": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
+      "2": "COOKIES BLACK FESTA FUTURINHOS 30X40g",
+      "3": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha04",
-      "2": "LinhaW01",
-      "3": "Linha05",
-      "4": "LinhaW01",
+      "1": "Linha02",
+      "2": "Linha05",
+      "3": "LinhaW01",
+      "4": "",
       "5": ""
     }
   },
