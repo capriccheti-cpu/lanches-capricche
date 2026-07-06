@@ -1,9 +1,7 @@
 name: Atualizar Abastecimento
-
 on:
   repository_dispatch:
     types: [atualizar-abastecimento]
-
 jobs:
   atualizar:
     runs-on: ubuntu-latest
@@ -12,12 +10,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Atualizar JSON
         env:
           SETOR: ${{ github.event.client_payload.setor }}
           ABASTECEDOR: ${{ github.event.client_payload.abastecedor }}
           DATAHORA: ${{ github.event.client_payload.datahora }}
+          HORARIO: ${{ github.event.client_payload.horario }}
           POTES: ${{ github.event.client_payload.potes }}
           LINHAS: ${{ github.event.client_payload.linhas }}
         run: |
@@ -26,32 +24,27 @@ jobs:
           setor    = os.environ.get("SETOR","")
           abast    = os.environ.get("ABASTECEDOR","")
           datahora = os.environ.get("DATAHORA","")
+          horario  = os.environ.get("HORARIO","")
           potes_str  = os.environ.get("POTES","")
           linhas_str = os.environ.get("LINHAS","")
-
           potes_lista  = potes_str.split("|")
           linhas_lista = linhas_str.split("|")
-
           potes  = {str(i+1): potes_lista[i].strip() if i < len(potes_lista) else "" for i in range(5)}
           linhas = {str(i+1): linhas_lista[i].strip() if i < len(linhas_lista) else "" for i in range(5)}
-
           with open("abastecimento.json","r",encoding="utf-8") as f:
               data = json.load(f)
-
           data[setor] = {
               "setor": setor,
               "abastecedor": abast,
               "datahora": datahora,
+              "horario": horario,
               "potes": potes,
               "linhas": linhas
           }
-
           with open("abastecimento.json","w",encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False, indent=2)
-
           print(f"✅ Setor {setor} atualizado!")
           PYEOF
-
       - name: Commit e Push
         run: |
           git config user.name "GitHub Actions"
