@@ -42,20 +42,21 @@
   "PAF": {
     "setor": "PAF",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-03",
+    "datahora": "2026-07-08",
+    "horario": "10:59",
     "potes": {
-      "1": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
-      "2": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "3": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "4": "COOKIES CHOC BRANCO FUTURINHOS 30X60g",
-      "5": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g"
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha01",
-      "3": "Linha02",
-      "4": "Linha02",
-      "5": "LinhaW01"
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "Linha05",
+      "5": ""
     }
   },
   "Expedicao": {
