@@ -192,20 +192,21 @@
   "Central_de_Residuos": {
     "setor": "Central_de_Residuos",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-12",
+    "datahora": "2026-07-08",
+    "horario": "11:02",
     "potes": {
-      "1": "Maisena",
-      "2": "Maisena",
-      "3": "Maisena",
-      "4": "Maisena",
-      "5": "Maisena"
+      "1": "MAMMA MIA GERGELIM 20x301,5g",
+      "2": "",
+      "3": "",
+      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha03",
-      "2": "Linha03",
-      "3": "Linha03",
-      "4": "Linha03",
-      "5": "Linha03"
+      "1": "Linha05",
+      "2": "",
+      "3": "",
+      "4": "LinhaW01",
+      "5": ""
     }
   }
 }
