@@ -121,20 +121,21 @@
   "Obras": {
     "setor": "Obras",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-19",
+    "datahora": "2026-07-08",
+    "horario": "11:01",
     "potes": {
-      "1": "Cream Cracker",
-      "2": "Cream Cracker",
-      "3": "Cream Cracker",
-      "4": "Cream Cracker",
-      "5": "Cream Cracker"
+      "1": "MAMMAMIA RECHEADO BACON 21X93,3g",
+      "2": "",
+      "3": "",
+      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha01",
-      "3": "Linha01",
-      "4": "Linha01",
-      "5": "Linha01"
+      "1": "Linha04",
+      "2": "",
+      "3": "",
+      "4": "LinhaW01",
+      "5": ""
     }
   },
   "Central de Resíduos": {
