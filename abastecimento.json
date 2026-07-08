@@ -1,22 +1,22 @@
 {
   "ADM": {
     "setor": "ADM",
-    "abastecedor": "Abastecimento Lanches",
-    "datahora": "2026-07-07",
-    "horario": "13:54",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-08",
+    "horario": "10:58",
     "potes": {
-      "1": "RECHEADO BEM CASADO FUTURINHOS 30x113g",
-      "2": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "1": "COOKIES CHOC BRANCO FUTURINHOS 30X60g",
+      "2": "",
       "3": "",
       "4": "",
-      "5": "COOKIES CHOC BRANCO FUTURINHOS 30X60g"
+      "5": ""
     },
     "linhas": {
-      "1": "Linha02",
-      "2": "Linha03",
+      "1": "Linha01",
+      "2": "",
       "3": "",
       "4": "",
-      "5": "LinhaW02"
+      "5": ""
     }
   },
   "RH": {
