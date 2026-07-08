@@ -80,19 +80,20 @@
   },
   "Industrial": {
     "setor": "Industrial",
-    "abastecedor": "Abastecimento Lanches",
-    "datahora": "2026-07-03",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-08",
+    "horario": "11:00",
     "potes": {
-      "1": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "2": "MAMMAMIA RECH REQUEIJAO 21X93,3g",
-      "3": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "1": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
+      "2": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha03",
-      "3": "Linha05",
+      "1": "Linha04",
+      "2": "Linha02",
+      "3": "",
       "4": "",
       "5": ""
     }
