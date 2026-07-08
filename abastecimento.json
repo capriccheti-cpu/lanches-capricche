@@ -102,20 +102,21 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-06-30",
+    "datahora": "2026-07-08",
+    "horario": "11:20",
     "potes": {
-      "1": "Maria",
-      "2": "Amanteigado",
-      "3": "Maria",
-      "4": "Wafer",
-      "5": "Wafer"
+      "1": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
+      "2": "COOKIES CHOC BRANCO FUTURINHOS 30X60g",
+      "3": "",
+      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
+      "5": ""
     },
     "linhas": {
       "1": "Linha03",
-      "2": "Linha03",
-      "3": "Linha02",
-      "4": "LinhaW01",
-      "5": "Linha03"
+      "2": "Linha02",
+      "3": "",
+      "4": "Linha02",
+      "5": ""
     }
   },
   "Obras": {
