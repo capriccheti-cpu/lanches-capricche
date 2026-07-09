@@ -6,6 +6,168 @@
 <title>Capricche — Estação de Lanches</title>
 <style>
   body{font-family:Arial,sans-serif;margin:0;background:#fff5f5;}
+  .header{background:#D41217;padding:14px 20px;display:flex;align-items:center;}
+  .header .logo{height:56px;width:auto;display:block;}
+  .banner{background:#F5C518;padding:10px 20px;font-weight:bold;color:#A50D11;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+  .container{max-width:480px;margin:20px auto;padding:0 16px 40px;}
+  .card{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);overflow:hidden;margin-bottom:16px;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .card-title{background:#D41217;color:white;padding:10px 16px;font-weight:bold;font-size:13px;text-transform:uppercase;letter-spacing:1px;display:flex;justify-content:center;align-items:center;}
+  .card-body{padding:16px;}
+  .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(212,18,23,0.12);font-size:14px;}
+  .row:last-child{border-bottom:none;}
+  .row span:first-child{color:#A50D11;font-weight:bold;}
+  .row span:last-child{color:#2A0203;font-weight:bold;}
+  .divider{height:1px;background:rgba(212,18,23,0.12);margin:4px 0 12px;}
+  .potes-titulo{font-size:11px;font-weight:bold;color:#A50D11;text-transform:uppercase;letter-spacing:1px;margin:12px 0 8px;}
+  .pote{display:flex;align-items:center;gap:10px;background:rgba(212,18,23,0.06);border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+  .pote:last-child{margin-bottom:0;}
+  .pote-num{background:#D41217;color:white;width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;}
+  .pote-info{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .pote-nome{font-size:13px;font-weight:bold;color:#2A0203;}
+  .pote-linha{font-size:11px;color:#A50D11;font-weight:600;flex-shrink:0;white-space:nowrap;}
+  .pote-linha::before{content:"🏭 ";}
+  .sem-potes{text-align:center;padding:16px;color:#A50D11;font-size:13px;opacity:0.75;}
+  .aguardando{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);padding:40px 20px;text-align:center;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .aguardando .emoji{font-size:48px;margin-bottom:16px;}
+  .aguardando h2{color:#D41217;font-size:18px;margin:0 0 8px;}
+  .aguardando p{color:#A50D11;font-size:14px;margin:0;opacity:0.8;}
+  .loading{text-align:center;padding:40px;color:#A50D11;font-weight:bold;}
+  .erro{background:#fff0f0;border:1px solid #D41217;border-radius:10px;padding:20px;text-align:center;color:#A50D11;}
+  .footer{text-align:center;padding:16px;background:#A50D11;color:rgba(255,255,255,0.7);font-size:12px;}
+  .footer strong{color:#F5C518;}
+</style>
+</head>
+<body>
+<div class="header">
+  <img class="logo" src="logo.png" alt="Capricche">
+</div>
+<div class="banner" id="banner-setor">Carregando...</div>
+<div class="container">
+  <div id="conteudo"><div class="loading">Buscando dados...</div></div>
+</div>
+<div class="footer">
+  <p>Estações de Lanches · <strong>Capricche</strong></p>
+  <p>Atualizado automaticamente a cada abastecimento</p>
+</div>
+<script>
+  const RAW_URL="https://raw.githubusercontent.com/capriccheti-cpu/lanches-capricche/main/abastecimento.json";
+  const SETOR=new URLSearchParams(window.location.search).get("setor")||"ADM";
+
+  function dadosValidos(d){
+    if(!d) return false;
+    if(!d.abastecedor) return false;
+    if(d.abastecedor.includes("<")) return false;
+    return true;
+  }
+
+  function formatarData(str){
+    if(!str) return "—";
+    try{
+      if(str.includes("T")){
+        const d=new Date(str);
+        return d.toLocaleDateString("pt-BR");
+      }
+      if(str.includes("-")){
+        const [y,m,dia]=str.split("-");
+        return `${dia}/${m}/${y}`;
+      }
+      return str;
+    }catch(e){return str;}
+  }
+
+  // Verifica se um pote tem conteúdo válido (ignora vazio, "-" e "—")
+  function poteTemConteudo(valor){
+    if(!valor) return false;
+    const v=String(valor).trim();
+    return v!=="" && v!=="-" && v!=="—";
+  }
+
+  async function carregar(){
+    try{
+      const res=await fetch(RAW_URL+"?t="+Date.now());
+      if(!res.ok) throw new Error("Erro "+res.status);
+      const dados=await res.json();
+      const d=dados[SETOR];
+
+      document.getElementById("banner-setor").textContent="ESTAÇÃO · "+SETOR;
+
+      if(!dadosValidos(d)){
+        document.getElementById("conteudo").innerHTML=`
+          <div class="aguardando">
+            <div class="emoji">🕐</div>
+            <h2>Olá!</h2>
+            <p>Ainda estamos aguardando o abastecimento!</p>
+          </div>`;
+        return;
+      }
+
+      // potes e linhas podem vir como objeto {1:..,2:..} ou string "a|b|c|d|e"
+      let potes=d.potes||{};
+      let linhas=d.linhas||{};
+      if(typeof potes==="string") potes=potes.split("|");
+      if(typeof linhas==="string") linhas=linhas.split("|");
+
+      // Monta a lista de potes preenchidos (1 a 5) e filtra os vazios
+      const potesPreenchidos=[1,2,3,4,5]
+        .map(n=>{
+          const idx=n-1;
+          const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"";
+          const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
+          return {n, biscoito, linha};
+        })
+        .filter(p=>poteTemConteudo(p.biscoito));
+
+      const potesHTML=potesPreenchidos.length
+        ? potesPreenchidos.map(p=>`
+          <div class="pote">
+            <div class="pote-num">${p.n}</div>
+            <div class="pote-info">
+              <span class="pote-nome">${p.biscoito}</span>
+              ${p.linha?`<span class="pote-linha">${p.linha}</span>`:""}
+            </div>
+          </div>`).join("")
+        : `<div class="sem-potes">Nenhum pote abastecido no momento.</div>`;
+
+      document.getElementById("conteudo").innerHTML=`
+        <div class="card">
+          <div class="card-title">
+            <span>📋 Abastecimento</span>
+          </div>
+          <div class="card-body">
+            <div class="row"><span>Abastecido por</span><span>${d.abastecedor||"—"}</span></div>
+            <div class="row"><span>Data</span><span>${formatarData(d.datahora||d.data)}</span></div>
+            <div class="row"><span>Horário</span><span>${d.horario||"—"}</span></div>
+            <div class="potes-titulo">🍪 Biscoitos nos Potes</div>
+            <div class="divider"></div>
+            ${potesHTML}
+          </div>
+        </div>`;
+
+    }catch(e){
+      document.getElementById("conteudo").innerHTML=`
+        <div class="erro"><p>⚠️ Não foi possível carregar os dados.</p><p style="font-size:12px;margin-top:6px">${e.message}</p></div>`;
+    }
+  }
+
+  carregar();
+  setInterval(carregar, 30000);
+  document.addEventListener("visibilitychange",function(){
+    if(document.visibilityState==="visible") carregar();
+  });
+</script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Capricche — Estação de Lanches</title>
+<style>
+  body{font-family:Arial,sans-serif;margin:0;background:#fff5f5;}
   .header{background:#D41217;padding:16px 20px;display:flex;align-items:center;gap:12px;}
   .header h1{color:white;font-size:20px;margin:0;}
   .banner{background:#F5C518;padding:10px 20px;font-weight:bold;color:#A50D11;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
@@ -158,3 +320,6 @@
 </script>
 </body>
 </html>
+
+
+-->
