@@ -229,5 +229,25 @@
       "4": "LinhaW01",
       "5": ""
     }
+  },
+  "Expedição": {
+    "setor": "Expedição",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-08",
+    "horario": "22:57",
+    "potes": {
+      "1": "MAMMA MIA GERGELIM 20x301,5g",
+      "2": "",
+      "3": "",
+      "4": "CREAM CRACKER PREMIUM 20X301,5G",
+      "5": "MAMMAMIA RECHEADO PIZZA 21X93,3"
+    },
+    "linhas": {
+      "1": "LinhaW01",
+      "2": "",
+      "3": "",
+      "4": "LinhaW02",
+      "5": "LinhaW01"
+    }
   }
 }
