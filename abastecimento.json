@@ -39,7 +39,26 @@
       "5": ""
     }
   },
-  "Producao": {},
+  "Producao": {
+    "setor": "Producao",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-08",
+    "horario": "22:32",
+    "potes": {
+      "1": "",
+      "2": "",
+      "3": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
+      "1": "",
+      "2": "",
+      "3": "Linha03",
+      "4": "",
+      "5": ""
+    }
+  },
   "PAF": {
     "setor": "PAF",
     "abastecedor": "Augusto Monte da Silva",
