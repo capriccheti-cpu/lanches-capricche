@@ -233,20 +233,20 @@
     "setor": "Central_de_Residuos",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-07-08",
-    "horario": "11:02",
+    "horario": "23:33",
     "potes": {
-      "1": "MAMMA MIA GERGELIM 20x301,5g",
-      "2": "",
-      "3": "",
-      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
-      "5": ""
+      "1": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
+      "2": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
+      "3": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
+      "4": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
+      "5": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g"
     },
     "linhas": {
-      "1": "Linha05",
-      "2": "",
-      "3": "",
-      "4": "LinhaW01",
-      "5": ""
+      "1": "Linha03",
+      "2": "Linha03",
+      "3": "Linha02",
+      "4": "Linha03",
+      "5": "Linha03"
     }
   },
   "Expedição": {
