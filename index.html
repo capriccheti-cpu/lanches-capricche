@@ -6,220 +6,37 @@
 <title>Capricche — Estação de Lanches</title>
   
 <style>
-  body{
-    font-family:Arial,sans-serif;
-    margin:0;
-    background:#F4EEE6;
-  }
+  body{font-family:Arial,sans-serif;margin:0;background:#fff5f5;}
+  .header{background:#D41217;padding:14px 20px;display:flex;align-items:center;}
+  .header .logo{height:56px;width:auto;display:block;}
+  .banner{background:#F5C518;padding:10px 20px;font-weight:bold;color:#A50D11;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+  .container{max-width:480px;margin:20px auto;padding:0 16px 40px;}
+  .card{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);overflow:hidden;margin-bottom:16px;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .card-title{background:#D41217;color:white;padding:10px 16px;font-weight:bold;font-size:13px;text-transform:uppercase;letter-spacing:1px;display:flex;justify-content:center;align-items:center;}
+  .card-body{padding:16px;}
+  .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(212,18,23,0.12);font-size:14px;}
+  .row:last-child{border-bottom:none;}
+  .row span:first-child{color:#A50D11;font-weight:bold;}
+  .row span:last-child{color:#2A0203;font-weight:bold;}
+  .divider{height:1px;background:rgba(212,18,23,0.12);margin:4px 0 12px;}
+  .potes-titulo{font-size:11px;font-weight:bold;color:#A50D11;text-transform:uppercase;letter-spacing:1px;margin:12px 0 8px;}
+  .pote{display:flex;align-items:center;gap:10px;background:rgba(212,18,23,0.06);border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+  .pote:last-child{margin-bottom:0;}
+  .pote-num{background:#D41217;color:white;width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;}
+  .pote-info{flex:1;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .pote-nome{font-size:13px;font-weight:bold;color:#2A0203;}
+  .pote-linha{font-size:11px;color:#A50D11;font-weight:600;flex-shrink:0;white-space:nowrap;}
+  .pote-linha::before{content:"🏭 ";}
+  .sem-potes{text-align:center;padding:16px;color:#A50D11;font-size:13px;opacity:0.75;}
+  .aguardando{background:white;border-radius:12px;border:1px solid rgba(212,18,23,0.15);padding:40px 20px;text-align:center;box-shadow:0 2px 12px rgba(212,18,23,0.08);}
+  .aguardando .emoji{font-size:48px;margin-bottom:16px;}
+  .aguardando h2{color:#D41217;font-size:18px;margin:0 0 8px;}
+  .aguardando p{color:#A50D11;font-size:14px;margin:0;opacity:0.8;}
+  .loading{text-align:center;padding:40px;color:#A50D11;font-weight:bold;}
+  .erro{background:#fff0f0;border:1px solid #D41217;border-radius:10px;padding:20px;text-align:center;color:#A50D11;}
+  .footer{text-align:center;padding:16px;background:#A50D11;color:rgba(255,255,255,0.7);font-size:12px;}
+  .footer strong{color:#F5C518;}
 
-  .header{
-    background:#C65B36;
-    padding:14px 20px;
-    display:flex;
-    align-items:center;
-  }
-
-  .header .logo{
-    height:56px;
-    width:auto;
-    display:block;
-  }
-
-  .banner{
-    background:#EDE4D8;
-    padding:10px 20px;
-    font-weight:bold;
-    color:#A84826;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-  }
-
-  .container{
-    max-width:480px;
-    margin:20px auto;
-    padding:0 16px 40px;
-  }
-
-  .card{
-    background:#F8F4EE;
-    border-radius:12px;
-    border:1px solid #E2D8CC;
-    overflow:hidden;
-    margin-bottom:16px;
-    box-shadow:0 2px 12px rgba(0,0,0,0.08);
-  }
-
-  .card-title{
-    background:#C65B36;
-    color:white;
-    padding:10px 16px;
-    font-weight:bold;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-
-  .card-body{
-    padding:16px;
-  }
-
-  .row{
-    display:flex;
-    justify-content:space-between;
-    padding:8px 0;
-    border-bottom:1px dashed #E2D8CC;
-    font-size:14px;
-  }
-
-  .row:last-child{
-    border-bottom:none;
-  }
-
-  .row span:first-child{
-    color:#A84826;
-    font-weight:bold;
-  }
-
-  .row span:last-child{
-    color:#3D2A20;
-    font-weight:bold;
-  }
-
-  .divider{
-    height:1px;
-    background:#E2D8CC;
-    margin:4px 0 12px;
-  }
-
-  .potes-titulo{
-    font-size:11px;
-    font-weight:bold;
-    color:#A84826;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin:12px 0 8px;
-  }
-
-  .pote{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    background:#EFE7DD;
-    border-radius:8px;
-    padding:10px 12px;
-    margin-bottom:8px;
-  }
-
-  .pote:last-child{
-    margin-bottom:0;
-  }
-
-  .pote-num{
-    background:#C65B36;
-    color:white;
-    width:26px;
-    height:26px;
-    border-radius:6px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:bold;
-    flex-shrink:0;
-  }
-
-  .pote-info{
-    flex:1;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-    gap:8px;
-    flex-wrap:wrap;
-  }
-
-  .pote-nome{
-    font-size:13px;
-    font-weight:bold;
-    color:#3D2A20;
-  }
-
-  .pote-linha{
-    font-size:11px;
-    color:#A84826;
-    font-weight:600;
-    flex-shrink:0;
-    white-space:nowrap;
-  }
-
-  .pote-linha::before{
-    content:"🏭 ";
-  }
-
-  .sem-potes{
-    text-align:center;
-    padding:16px;
-    color:#7A6A5A;
-    font-size:13px;
-  }
-
-  .aguardando{
-    background:#F8F4EE;
-    border-radius:12px;
-    border:1px solid #E2D8CC;
-    padding:40px 20px;
-    text-align:center;
-    box-shadow:0 2px 12px rgba(0,0,0,0.08);
-  }
-
-  .aguardando .emoji{
-    font-size:48px;
-    margin-bottom:16px;
-  }
-
-  .aguardando h2{
-    color:#A84826;
-    font-size:18px;
-    margin:0 0 8px;
-  }
-
-  .aguardando p{
-    color:#7A6A5A;
-    font-size:14px;
-    margin:0;
-  }
-
-  .loading{
-    text-align:center;
-    padding:40px;
-    color:#A84826;
-    font-weight:bold;
-  }
-
-  .erro{
-    background:#FFF7F5;
-    border:1px solid #E5B9A6;
-    border-radius:10px;
-    padding:20px;
-    text-align:center;
-    color:#A84826;
-  }
-
-  .footer{
-    text-align:center;
-    padding:16px;
-    background:#A84826;
-    color:rgba(255,255,255,0.8);
-    font-size:12px;
-  }
-
-  .footer strong{
-    color:white;
-  }
 </style>
 
 </head>
