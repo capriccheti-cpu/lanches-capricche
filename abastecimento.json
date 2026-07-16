@@ -101,21 +101,21 @@
   "Industrial": {
     "setor": "Industrial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-08",
-    "horario": "23:13",
+    "datahora": "2026-07-16",
+    "horario": "00:32",
     "potes": {
-      "1": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "2": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "3": "",
-      "4": "",
-      "5": "COOKIES BLACK FESTA FUTURINHOS 30X40g"
+      "1": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "2": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "3": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha01",
-      "2": "Linha01",
-      "3": "",
-      "4": "",
-      "5": "Linha01"
+      "1": "LinhaW02",
+      "2": "Linha04",
+      "3": "Linha04",
+      "4": "Linha04",
+      "5": ""
     }
   },
   "Estoque": {
