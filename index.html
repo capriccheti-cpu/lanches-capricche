@@ -1,371 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Capricche — Estação de Lanches</title>
-  
-<style>
-:root{
-  --bg:#F4EEE6;
-  --card:#F8F4EE;
-  --primary:#C65B36;
-  --primary-dark:#A84826;
-  --text:#3D2A20;
-  --text-light:#7A6A5A;
-  --border:#E2D8CC;
-}
+<meta name="description" content="Status de abastecimento em tempo real das Estações de Lanches Capricche."/>
+<title>Capricche · Estação de Lanches</title>
 
-*{
-  box-sizing:border-box;
-}
+<link rel="icon" type="image/png" href="favicon.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 
-body{
-  font-family:Arial,sans-serif;
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-}
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
 
-.header{
-  background:linear-gradient(135deg,#C65B36,#A84826);
-  padding:16px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-
-.header .logo{
-  height:56px;
-  width:auto;
-  display:block;
-}
-
-
-
-  
-
-.banner{
-  background:#EDE4D8;
-  padding:12px 20px;
-  font-weight:bold;
-  color:var(--primary-dark);
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:1.2px;
-  border-bottom:1px solid var(--border);
-}
-
-.container{
-  max-width:520px;
-  margin:24px auto;
-  padding:0 16px 40px;
-}
-
-.card{
-  background:var(--card);
-  border-radius:18px;
-  border:1px solid var(--border);
-  overflow:hidden;
-  box-shadow:0 8px 20px rgba(0,0,0,.05);
-}
-
-.card-title{
-  background:var(--primary);
-  color:white;
-  padding:14px 18px;
-  font-weight:bold;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.card-body{
-  padding:18px;
-}
-
-.row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 0;
-  border-bottom:1px dashed var(--border);
-  font-size:14px;
-}
-
-.row:last-child{
-  border-bottom:none;
-}
-
-.row span:first-child{
-  color:var(--primary-dark);
-  font-weight:600;
-}
-
-.row span:last-child{
-  color:var(--text);
-  font-weight:bold;
-}
-
-.divider{
-  height:1px;
-  background:var(--border);
-  margin:8px 0 14px;
-}
-
-.potes-titulo{
-  font-size:12px;
-  font-weight:bold;
-  color:var(--primary-dark);
-  text-transform:uppercase;
-  letter-spacing:1px;
-  margin:18px 0 8px;
-}
-
-.pote{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  background:#EFE7DD;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:12px;
-  margin-bottom:10px;
-  transition:.2s;
-}
-
-.pote:hover{
-  transform:translateY(-1px);
-}
-
-.pote:last-child{
-  margin-bottom:0;
-}
-
-.pote-num{
-  background:var(--primary);
-  color:white;
-  width:32px;
-  height:32px;
-  border-radius:8px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
-  font-weight:bold;
-  flex-shrink:0;
-}
-
-.pote-info{
-  flex:1;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.pote-nome{
-  font-size:14px;
-  font-weight:bold;
-  color:var(--text);
-}
-
-.pote-linha{
-  font-size:12px;
-  color:var(--primary-dark);
-  font-weight:600;
-}
-
-.pote-linha::before{
-  content:"🏭 ";
-}
-
-.sem-potes{
-  text-align:center;
-  padding:20px;
-  color:var(--text-light);
-}
-
-.loading{
-  text-align:center;
-  padding:40px;
-  color:var(--primary-dark);
-  font-weight:bold;
-}
-
-.aguardando{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:40px 20px;
-  text-align:center;
-  box-shadow:0 8px 20px rgba(0,0,0,.05);
-}
-
-.aguardando .emoji{
-  font-size:52px;
-  margin-bottom:16px;
-}
-
-.aguardando h2{
-  color:var(--primary-dark);
-  margin:0 0 10px;
-}
-
-.aguardando p{
-  color:var(--text-light);
-  margin:0;
-}
-
-.erro{
-  background:#FFF7F5;
-  border:1px solid #E5B9A6;
-  border-radius:16px;
-  padding:20px;
-  text-align:center;
-  color:var(--primary-dark);
-}
-
-.footer{
-  text-align:center;
-  padding:18px;
-  background:linear-gradient(135deg,#C65B36,#A84826);
-  color:rgba(255,255,255,.8);
-  font-size:12px;
-}
-
-.footer strong{
-  color:#FFF;
-}
-</style>
-  
+<link rel="stylesheet" href="assets/css/81aec61e.css"/>
 </head>
 <body>
-<div class="header">
-  <h1>🍪 Capricche</h1>
+
+<header class="hero">
+  <button type="button" class="btn-info" id="btn-info" aria-label="Sobre esta página" aria-haspopup="dialog">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+  </button>
+  <div class="hero-inner">
+    <div class="logo-chip enter"><img src="logo_capricche.png" alt="Capricche é Show!"/></div>
+    <h1 class="enter enter-1">Estação de Lanches</h1>
+    <p class="hero-sub enter enter-2">Status do abastecimento em tempo real</p>
+    <div class="hero-pills enter enter-3">
+      <span class="pill-setor" id="banner-setor">Carregando…</span>
+      <span class="pill-live"><span class="dot" aria-hidden="true"></span> Ao vivo</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div id="conteudo" aria-live="polite">
+    <div class="skeleton enter enter-4">
+      <div class="sk-line sk-w40"></div>
+      <div class="sk-line sk-h32 sk-w70"></div>
+      <div class="sk-line sk-w55"></div>
+      <div class="sk-line"></div>
+      <div class="sk-line sk-w70"></div>
+    </div>
+  </div>
+</main>
+
+<div class="modal-backdrop" id="modal-info" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal-head">
+      <div class="icon-chip">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+      </div>
+      <h2 id="modal-titulo">Sobre esta página</h2>
+      <button type="button" class="modal-close" id="modal-fechar" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <p>Este painel mostra, em tempo real, o status de abastecimento da Estação de Lanches Capricche do seu setor.</p>
+    <div class="modal-list">
+      <div class="modal-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+        <span><strong>Último abastecimento</strong> — quem abasteceu a estação, em que data e horário.</span>
+      </div>
+      <div class="modal-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+        <span><strong>Biscoitos nos potes</strong> — quais biscoitos estão disponíveis em cada pote da estação e a linha de produção de origem.</span>
+      </div>
+      <div class="modal-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+        <span><strong>Atualização automática</strong> — as informações são atualizadas sozinhas a cada novo abastecimento, sem precisar recarregar a página.</span>
+      </div>
+    </div>
+    <button type="button" class="btn-primary" id="modal-ok">Entendi</button>
+  </div>
 </div>
-<div class="banner" id="banner-setor">Carregando...</div>
-<div class="container">
-  <div id="conteudo"><div class="loading">Buscando dados...</div></div>
-</div>
-<div class="footer">
-  <p>Estações de Lanches · <strong>Capricche</strong></p>
-  <p>Atualizado automaticamente a cada abastecimento</p>
-</div>
-<script>
-  const RAW_URL="https://raw.githubusercontent.com/capriccheti-cpu/lanches-capricche/main/abastecimento.json";
-  const SETOR=new URLSearchParams(window.location.search).get("setor")||"ADM";
 
-  function dadosValidos(d){
-    if(!d) return false;
-    if(!d.abastecedor) return false;
-    if(d.abastecedor.includes("<")) return false;
-    return true;
-  }
+<footer class="footer">
+  <div class="sync"><span class="dot" aria-hidden="true"></span> <span id="sync-info">Sincronizando…</span></div>
+  <div class="copy">© 2026 Tecnologia &amp; Inovação · <strong>Capricche é Show!</strong></div>
+</footer>
 
-  function formatarData(str){
-    if(!str) return "—";
-    try{
-      if(str.includes("T")){
-        const d=new Date(str);
-        return d.toLocaleDateString("pt-BR");
-      }
-      if(str.includes("-")){
-        const [y,m,dia]=str.split("-");
-        return `${dia}/${m}/${y}`;
-      }
-      return str;
-    }catch(e){return str;}
-  }
-
-  // Verifica se um pote tem conteúdo válido (ignora vazio, "-" e "—")
-  function poteTemConteudo(valor){
-    if(!valor) return false;
-    const v=String(valor).trim();
-    return v!=="" && v!=="-" && v!=="—";
-  }
-
-  async function carregar(){
-    try{
-      const res=await fetch(RAW_URL+"?t="+Date.now());
-      if(!res.ok) throw new Error("Erro "+res.status);
-      const dados=await res.json();
-      const d=dados[SETOR];
-
-      document.getElementById("banner-setor").textContent="🍪 Estação · "+SETOR;
-
-      if(!dadosValidos(d)){
-        document.getElementById("conteudo").innerHTML=`
-          <div class="aguardando">
-            <div class="emoji">🕐</div>
-            <h2>Olá!</h2>
-            <p>Ainda estamos aguardando o abastecimento!</p>
-          </div>`;
-        return;
-      }
-
-      // potes e linhas podem vir como objeto {1:..,2:..} ou string "a|b|c|d|e"
-      let potes=d.potes||{};
-      let linhas=d.linhas||{};
-      if(typeof potes==="string") potes=potes.split("|");
-      if(typeof linhas==="string") linhas=linhas.split("|");
-
-      // Monta a lista de potes preenchidos (1 a 5) e filtra os vazios
-      const potesPreenchidos=[1,2,3,4,5]
-        .map(n=>{
-          const idx=n-1;
-          const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"";
-          const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
-          return {n, biscoito, linha};
-        })
-        .filter(p=>poteTemConteudo(p.biscoito));
-
-      const potesHTML=potesPreenchidos.length
-        ? potesPreenchidos.map(p=>`
-          <div class="pote">
-            <div class="pote-num">${p.n}</div>
-            <div class="pote-info">
-              <span class="pote-nome">${p.biscoito}</span>
-              ${p.linha?`<span class="pote-linha">${p.linha}</span>`:""}
-            </div>
-          </div>`).join("")
-        : `<div class="sem-potes">Nenhum pote abastecido no momento.</div>`;
-
-      document.getElementById("conteudo").innerHTML=`
-        <div class="card">
-          <div class="card-title">
-            <span>📋 Abastecimento</span>
-            <span>${d.horario||"—"}</span>
-          </div>
-          <div class="card-body">
-            <div class="row"><span>Abastecedor</span><span>${d.abastecedor||"—"}</span></div>
-            <div class="row"><span>Data</span><span>${formatarData(d.datahora||d.data)}</span></div>
-            <div class="row"><span>Horário</span><span>${d.horario||"—"}</span></div>
-            <div class="potes-titulo">🍪 Biscoitos nos Potes</div>
-            <div class="divider"></div>
-            ${potesHTML}
-          </div>
-        </div>`;
-
-    }catch(e){
-      document.getElementById("conteudo").innerHTML=`
-        <div class="erro"><p>⚠️ Não foi possível carregar os dados.</p><p style="font-size:12px;margin-top:6px">${e.message}</p></div>`;
-    }
-  }
-
-  carregar();
-  setInterval(carregar, 30000);
-  document.addEventListener("visibilitychange",function(){
-    if(document.visibilityState==="visible") carregar();
-  });
-</script>
+<script src="assets/js/55a1a2d5.js"></script>
 </body>
 </html>
-
-
