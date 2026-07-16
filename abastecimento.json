@@ -233,21 +233,21 @@
   "Central_de_Residuos": {
     "setor": "Central_de_Residuos",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-08",
-    "horario": "23:33",
+    "datahora": "2026-07-16",
+    "horario": "00:33",
     "potes": {
-      "1": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
-      "2": "COOKIES TRIPLO CHOC FUTURINHOS 30X60g",
-      "3": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
-      "4": "COOKIES BLACK FESTA FUTURINHOS 30X60g",
-      "5": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g"
+      "1": "CREAM CRACKER PREMIUM 20X301,5G",
+      "2": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "3": "MAMMA MIA GERGELIM 20x301,5g",
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha03",
-      "2": "Linha03",
-      "3": "Linha02",
-      "4": "Linha03",
-      "5": "Linha03"
+      "1": "Linha05",
+      "2": "LinhaW01",
+      "3": "LinhaW01",
+      "4": "",
+      "5": ""
     }
   },
   "Expedição": {
