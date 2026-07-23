@@ -99,7 +99,7 @@
         const biscoito=(Array.isArray(potes)?potes[idx]:(potes[n]||potes[String(n)]))||"";
         const linha=(Array.isArray(linhas)?linhas[idx]:(linhas[n]||linhas[String(n)]))||"";
         return {n, biscoito, linha};
-      }).filter(p=>poteTemConteudo(p.biscoito));
+      }).filter(p=>poteTemConteudo(p.biscoito) && poteTemConteudo(p.linha));
       const qtdCheios=potesPreenchidos.length;
 
       const potesHTML=qtdCheios
