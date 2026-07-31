@@ -1,21 +1,21 @@
 {
   "ADM": {
     "setor": "ADM",
-    "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-22",
-    "horario": "22:36",
+    "abastecedor": "Abastecimento Lanches",
+    "datahora": "2026-07-31",
+    "horario": "09:41",
     "potes": {
-      "1": "COOKIES TRIPLO CHOC FUTURINHOS",
-      "2": "COOKIES TRIPLO CHOC FUTURINHOS",
-      "3": "",
-      "4": "",
+      "1": "WAFER BRIGADEIRO CAPRISHOW",
+      "2": "RECHEADO BRIGADEIRO FUTURINHOS",
+      "3": "WAFER BRIGADEIRO CAPRISHOW",
+      "4": "WAFER BRIGADEIRO CAPRISHOW",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 06",
-      "2": "",
-      "3": "",
-      "4": "",
+      "1": "Linha W1",
+      "2": "Linha 02",
+      "3": "Linha W1",
+      "4": "Linha W1",
       "5": ""
     }
   },
