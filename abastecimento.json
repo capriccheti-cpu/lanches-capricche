@@ -1,21 +1,21 @@
 {
   "ADM": {
     "setor": "ADM",
-    "abastecedor": "Abastecimento Lanches",
-    "datahora": "2026-07-31",
-    "horario": "09:52",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-08-03",
+    "horario": "10:29",
     "potes": {
-      "1": "WAFER BRIGADEIRO CAPRISHOW",
-      "2": "RECHEADO BRIGADEIRO FUTURINHOS",
-      "3": "WAFER BRIGADEIRO CAPRISHOW",
-      "4": "WAFER BRIGADEIRO CAPRISHOW",
+      "1": "ROSQUINHA LEITE CAPRICCHE",
+      "2": "CREAM CRACKER PREMIUM",
+      "3": "ROSQUINHA LEITE CAPRICCHE",
+      "4": "CREAM CRACKER PREMIUM",
       "5": ""
     },
     "linhas": {
-      "1": "Linha W1",
-      "2": "Linha 02",
-      "3": "Linha W1",
-      "4": "Linha W1",
+      "1": "Linha 04",
+      "2": "Linha 01",
+      "3": "Linha 04",
+      "4": "Linha 01",
       "5": ""
     }
   },
