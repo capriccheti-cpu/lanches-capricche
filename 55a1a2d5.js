@@ -132,10 +132,12 @@
               <div class="stat-label">${I.calendar(12)} Data</div>
               <div class="stat-value mono">${esc(formatarData(d.datahora||d.data))}</div>
             </div>
+          <!--  
             <div class="stat">
               <div class="stat-label">${I.user(12)} Abastecedor</div>
               <div class="stat-value">${esc(d.abastecedor)||"—"}</div>
-            </div>
+            </div> 
+            -->
           </div>
         </div>
 
