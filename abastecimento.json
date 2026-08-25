@@ -3,18 +3,18 @@
     "setor": "ADM",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-08-25",
-    "horario": "16:25",
+    "horario": "16:47",
     "potes": {
-      "1": "MAIZENA TRADICIONAL CAPRICCHE",
-      "2": "MAIZENA BAUNILHA CAPRICCHE",
-      "3": "AMANTEI CERELICIA LEITE E CEREAIS",
-      "4": "",
+      "1": "MAIZENA LEITE CAPRICCHE",
+      "2": "MAIZENA TRADICIONAL CAPRICCHE",
+      "3": "AMANTEI CERELICIA CACAU E CEREAIS",
+      "4": "MAIZENA LEITE CAPRICCHE",
       "5": ""
     },
     "linhas": {
       "1": "Linha 01",
       "2": "Linha 03",
-      "3": "Linha 02",
+      "3": "",
       "4": "",
       "5": ""
     }
