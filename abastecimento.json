@@ -2,21 +2,21 @@
   "ADM": {
     "setor": "ADM",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-08-25",
-    "horario": "17:24",
+    "datahora": "2026-08-26",
+    "horario": "10:20",
     "potes": {
-      "1": "MAIZENA TRADICIONAL CAPRICCHE",
-      "2": "MAIZENA TRADICIONAL CAPRICCHE",
-      "3": "MAIZENA LEITE CAPRICCHE",
-      "4": "MAIZENA LEITE CAPRICCHE",
-      "5": "AMANTEIGADO KIDS LEIT FUTURINHOS"
+      "1": "WAFER LARANJA FUTURINHOS",
+      "2": "MAMMA MIA ORIGINAL",
+      "3": "",
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha 01",
+      "1": "Linha Wafer",
       "2": "Linha 03",
-      "3": "Linha 03",
-      "4": "Linha 03",
-      "5": "Linha 02"
+      "3": "",
+      "4": "",
+      "5": ""
     }
   },
   "RH": {
