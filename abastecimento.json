@@ -23,20 +23,20 @@
     "setor": "RH",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-10-14",
-    "horario": "13:51",
+    "horario": "17:29",
     "potes": {
-      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "2": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "3": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "4": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "5": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL"
+      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "2": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "3": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha 06",
-      "2": "Linha 06",
-      "3": "Linha 06",
-      "4": "Linha 06",
-      "5": "Linha 06"
+      "1": "Linha 02",
+      "2": "Linha 02",
+      "3": "Linha 02",
+      "4": "",
+      "5": ""
     }
   },
   "Producao": {
