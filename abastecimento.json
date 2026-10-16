@@ -269,5 +269,25 @@
       "4": "LinhaW02",
       "5": "LinhaW01"
     }
+  },
+  "Bloco Social": {
+    "setor": "Bloco Social",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-10-15",
+    "horario": "18:34",
+    "potes": {
+      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "2": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
+      "1": "Linha 06",
+      "2": "Linha 06",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
   }
 }
