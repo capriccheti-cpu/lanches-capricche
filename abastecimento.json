@@ -273,21 +273,21 @@
   "Bloco Social": {
     "setor": "Bloco Social",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-10-15",
-    "horario": "18:34",
+    "datahora": "2026-10-16",
+    "horario": "18:50",
     "potes": {
-      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "2": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "AMANTEIGADO CERELICIA MAÇA E CANELA",
+      "2": "AMANTEIGADO CERELICIA MAÇA E CANELA",
+      "3": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "4": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "5": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL"
     },
     "linhas": {
-      "1": "Linha 06",
-      "2": "Linha 06",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "Linha 02",
+      "2": "Linha 02",
+      "3": "Linha 06",
+      "4": "Linha 06",
+      "5": "Linha 06"
     }
   }
 }
