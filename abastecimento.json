@@ -369,5 +369,25 @@
       "4": "Linha04",
       "5": "Linha05"
     }
+  },
+  "CentraldeResiduos": {
+    "setor": "CentraldeResiduos",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-16",
+    "horario": "14:39",
+    "potes": {
+      "1": "CREAM CRACKER PREMIUM 20X301,5G",
+      "2": "MAMMAMIA RECHEADO QJO DO REINO 21X93,3g",
+      "3": "MAMMA MIA GERGELIM 20x301,5g",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
+      "1": "Linha05",
+      "2": "LinhaW01",
+      "3": "LinhaW01",
+      "4": "",
+      "5": ""
+    }
   }
 }
