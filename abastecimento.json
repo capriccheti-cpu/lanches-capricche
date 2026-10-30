@@ -62,21 +62,21 @@
   "PAF": {
     "setor": "PAF",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-16",
-    "horario": "00:31",
+    "datahora": "2026-10-30",
+    "horario": "14:13",
     "potes": {
-      "1": "COOKIES BLACK FESTA FUTURINHOS 30X40g",
-      "2": "MAMMAMIA RECHEADO BACON 21X93,3g",
-      "3": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "2": "",
+      "3": "",
       "4": "",
-      "5": "MAMMAMIA RECHEADO BACON 21X93,3g"
+      "5": ""
     },
     "linhas": {
-      "1": "Linha04",
-      "2": "Linha05",
-      "3": "LinhaW01",
+      "1": "Linha 02",
+      "2": "",
+      "3": "",
       "4": "",
-      "5": "LinhaW01"
+      "5": ""
     }
   },
   "Expedicao": {
