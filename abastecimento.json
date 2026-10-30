@@ -349,5 +349,25 @@
       "4": "Linha04",
       "5": ""
     }
+  },
+  "EstoquePCP": {
+    "setor": "EstoquePCP",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-08",
+    "horario": "14:37",
+    "potes": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
+      "5": "COOKIES BLACK FESTA FUTURINHOS 30X40g"
+    },
+    "linhas": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "Linha04",
+      "5": "Linha05"
+    }
   }
 }
