@@ -354,21 +354,21 @@
   "EstoquePCP": {
     "setor": "EstoquePCP",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-08",
-    "horario": "14:37",
+    "datahora": "2026-10-30",
+    "horario": "14:46",
     "potes": {
-      "1": "",
+      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
       "2": "",
       "3": "",
-      "4": "COOKIES CHOC BRANCO FUTURINHOS 30X40g",
-      "5": "COOKIES BLACK FESTA FUTURINHOS 30X40g"
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "",
+      "1": "Linha 02",
       "2": "",
       "3": "",
-      "4": "Linha04",
-      "5": "Linha05"
+      "4": "",
+      "5": ""
     }
   },
   "CentraldeResiduos": {
