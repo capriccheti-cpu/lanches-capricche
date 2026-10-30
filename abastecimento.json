@@ -329,5 +329,25 @@
       "4": "",
       "5": ""
     }
+  },
+  "AdmIndustrial": {
+    "setor": "AdmIndustrial",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-07-16",
+    "horario": "14:37",
+    "potes": {
+      "1": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "2": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "3": "MAMMAMIA RECHEADO PRESUNTO 21X93,3g",
+      "4": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g",
+      "5": ""
+    },
+    "linhas": {
+      "1": "LinhaW02",
+      "2": "Linha04",
+      "3": "Linha04",
+      "4": "Linha04",
+      "5": ""
+    }
   }
 }
