@@ -410,5 +410,25 @@
       "4": "",
       "5": ""
     }
+  },
+  "Entrada Fabrica": {
+    "setor": "Entrada Fabrica",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-11-03",
+    "horario": "11:26",
+    "potes": {
+      "1": "AMANTEIGADO BLACK FUTURINHOS",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
+      "1": "Linha 02",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
   }
 }
