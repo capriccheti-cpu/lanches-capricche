@@ -142,21 +142,21 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-08",
-    "horario": "22:43",
+    "datahora": "2026-11-04",
+    "horario": "17:46",
     "potes": {
-      "1": "",
-      "2": "",
+      "1": "MAIZENA TRADICIONAL CAPRICCHE",
+      "2": "RECHEADO FLOCOS FUTURINHOS",
       "3": "",
       "4": "",
-      "5": "COOKIES TRIPLO CHOC FUTURINHOS 30X40g"
+      "5": ""
     },
     "linhas": {
-      "1": "",
-      "2": "",
+      "1": "Linha 01",
+      "2": "Linha 02",
       "3": "",
       "4": "",
-      "5": "Linha05"
+      "5": ""
     }
   },
   "Obras": {
