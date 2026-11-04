@@ -430,5 +430,25 @@
       "4": "",
       "5": ""
     }
+  },
+  "PRODUÇÃO": {
+    "setor": "PRODUÇÃO",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-11-04",
+    "horario": "15:23",
+    "potes": {
+      "1": "COOKIES CERELÍA CACAU E CEREAIS",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    },
+    "linhas": {
+      "1": "Linha 04",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": ""
+    }
   }
 }
