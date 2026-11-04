@@ -295,20 +295,20 @@
     "setor": "BlocoSocial",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-11-04",
-    "horario": "11:07",
+    "horario": "15:03",
     "potes": {
-      "1": "AMANTEIGADO CERELICIA CACAU E CEREAIS",
-      "2": "AMANTEIGADO BLACK FUTURINHOS",
-      "3": "AMANTEIGADO CERELICIA LEITE E CEREAIS",
-      "4": "",
-      "5": ""
+      "1": "",
+      "2": "MAMMAMIA RECHEADO CHOCOLATE",
+      "3": "WAFER MORANGO FUTURINHOS",
+      "4": "WAFER MORANGO CAPRISHOW",
+      "5": "WAFER MORANGO CAPRISHOW"
     },
     "linhas": {
-      "1": "Linha 02",
-      "2": "Linha 02",
-      "3": "Linha 02",
-      "4": "",
-      "5": ""
+      "1": "",
+      "2": "Linha 05",
+      "3": "L. Wafer",
+      "4": "L. Wafer",
+      "5": "L. Wafer"
     }
   },
   "BlocoADM": {
