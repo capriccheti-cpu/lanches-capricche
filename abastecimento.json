@@ -295,20 +295,20 @@
     "setor": "BlocoSocial",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-11-04",
-    "horario": "15:03",
+    "horario": "15:09",
     "potes": {
-      "1": "",
-      "2": "MAMMAMIA RECHEADO CHOCOLATE",
-      "3": "WAFER MORANGO FUTURINHOS",
-      "4": "WAFER MORANGO CAPRISHOW",
-      "5": "WAFER MORANGO CAPRISHOW"
+      "1": "AMANTEIGADO LEITE COBERTO",
+      "2": "AMANTEIGADO LEITE CAPRICCHE",
+      "3": "AMANTEIGADO LEITE CAPRICCHE",
+      "4": "AMANTEIGADO LEITE COBERTO",
+      "5": "AMANTEIGADO LEITE COBERTO"
     },
     "linhas": {
-      "1": "",
-      "2": "Linha 05",
-      "3": "L. Wafer",
-      "4": "L. Wafer",
-      "5": "L. Wafer"
+      "1": "Linha 06",
+      "2": "Linha 02",
+      "3": "Linha 02",
+      "4": "Linha 06",
+      "5": "Linha 06"
     }
   },
   "BlocoADM": {
