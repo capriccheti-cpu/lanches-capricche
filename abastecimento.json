@@ -354,21 +354,21 @@
   "EstoquePCP": {
     "setor": "EstoquePCP",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-10-30",
-    "horario": "14:46",
+    "datahora": "2026-11-04",
+    "horario": "14:38",
     "potes": {
-      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "2": "AMANTEIGADO CERELICIA CACAU E CEREAIS",
+      "3": "RECHEADO BLACK MORANGO FUTURINHOS",
+      "4": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "5": "CREAM CRACKER INTEGRAL"
     },
     "linhas": {
-      "1": "Linha 02",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": ""
+      "1": "Linha 06",
+      "2": "Linha 02",
+      "3": "Linha 02",
+      "4": "Linha 06",
+      "5": "Linha 03"
     }
   },
   "CentraldeResiduos": {
