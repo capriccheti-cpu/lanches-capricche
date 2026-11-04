@@ -294,19 +294,19 @@
   "BlocoSocial": {
     "setor": "BlocoSocial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-10-30",
-    "horario": "14:42",
+    "datahora": "2026-11-04",
+    "horario": "11:07",
     "potes": {
-      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
-      "2": "",
-      "3": "",
+      "1": "AMANTEIGADO CERELICIA CACAU E CEREAIS",
+      "2": "AMANTEIGADO BLACK FUTURINHOS",
+      "3": "AMANTEIGADO CERELICIA LEITE E CEREAIS",
       "4": "",
       "5": ""
     },
     "linhas": {
       "1": "Linha 02",
-      "2": "",
-      "3": "",
+      "2": "Linha 02",
+      "3": "Linha 02",
       "4": "",
       "5": ""
     }
