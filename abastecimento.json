@@ -103,17 +103,17 @@
     "setor": "Industrial",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-11-04",
-    "horario": "15:53",
+    "horario": "15:56",
     "potes": {
-      "1": "RECHEADO FLOCOS FUTURINHOS",
-      "2": "MAIZENA LEITE CAPRICCHE",
+      "1": "MAIZENA LEITE CAPRICCHE",
+      "2": "RECHEADO FLOCOS FUTURINHOS",
       "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 02",
-      "2": "Linha 01",
+      "1": "Linha 01",
+      "2": "Linha 02",
       "3": "",
       "4": "",
       "5": ""
