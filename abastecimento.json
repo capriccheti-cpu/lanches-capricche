@@ -3,19 +3,19 @@
     "setor": "ADM",
     "abastecedor": "Augusto Monte da Silva",
     "datahora": "2026-11-04",
-    "horario": "15:17",
+    "horario": "15:27",
     "potes": {
-      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
-      "2": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
-      "3": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
-      "4": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "1": "RECHEADO FLOCOS FUTURINHOS",
+      "2": "MAIZENA TRADICIONAL CAPRICCHE",
+      "3": "",
+      "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 02",
-      "2": "Linha 02",
-      "3": "Linha 02",
-      "4": "Linha 02",
+      "1": "Linha 01",
+      "2": "Linha 01",
+      "3": "",
+      "4": "",
       "5": ""
     }
   },
