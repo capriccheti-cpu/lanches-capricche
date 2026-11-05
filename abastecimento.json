@@ -142,18 +142,18 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-04",
-    "horario": "17:46",
+    "datahora": "2026-11-05",
+    "horario": "09:18",
     "potes": {
-      "1": "MAIZENA TRADICIONAL CAPRICCHE",
-      "2": "RECHEADO FLOCOS FUTURINHOS",
+      "1": "RECHEADO FLOCOS FUTURINHOS",
+      "2": "MAIZENA CHOCOLATE CAPRICCHE",
       "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 01",
-      "2": "Linha 02",
+      "1": "Linha 02",
+      "2": "Linha 01",
       "3": "",
       "4": "",
       "5": ""
