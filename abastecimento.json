@@ -102,19 +102,19 @@
   "Industrial": {
     "setor": "Industrial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-05",
-    "horario": "14:05",
+    "datahora": "2026-11-13",
+    "horario": "10:56",
     "potes": {
-      "1": "MAIZENA CHOCOLATE CAPRICCHE",
-      "2": "WAFER BLACK CAPRISHOW",
-      "3": "RECHEADO FLOCOS FUTURINHOS",
+      "1": "MAIZENA TRADICIONAL CAPRICCHE",
+      "2": "RECHEADO CHOCOLATE FUTURINHOS",
+      "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
       "1": "Linha 01",
-      "2": "L. Wafer",
-      "3": "Linha 02",
+      "2": "Linha 02",
+      "3": "",
       "4": "",
       "5": ""
     }
