@@ -102,19 +102,19 @@
   "Industrial": {
     "setor": "Industrial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-13",
-    "horario": "10:56",
+    "datahora": "2026-11-22",
+    "horario": "19:56",
     "potes": {
-      "1": "MAIZENA TRADICIONAL CAPRICCHE",
-      "2": "RECHEADO CHOCOLATE FUTURINHOS",
-      "3": "",
+      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "2": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "3": "RECHEADO FLOCOS FUTURINHOS",
       "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 01",
-      "2": "Linha 02",
-      "3": "",
+      "1": "Linha 06",
+      "2": "Linha 06",
+      "3": "Linha 02",
       "4": "",
       "5": ""
     }
