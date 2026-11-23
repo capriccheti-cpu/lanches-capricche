@@ -142,18 +142,18 @@
   "Produção": {
     "setor": "Produção",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-05",
-    "horario": "09:18",
+    "datahora": "2026-11-23",
+    "horario": "18:47",
     "potes": {
-      "1": "RECHEADO FLOCOS FUTURINHOS",
-      "2": "MAIZENA CHOCOLATE CAPRICCHE",
+      "1": "RECHEADO BLACK FUTURINHOS",
+      "2": "RECHEADO CHOCOLATE FUTURINHOS",
       "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
       "1": "Linha 02",
-      "2": "Linha 01",
+      "2": "Linha 02",
       "3": "",
       "4": "",
       "5": ""
