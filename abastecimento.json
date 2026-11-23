@@ -294,21 +294,21 @@
   "BlocoSocial": {
     "setor": "BlocoSocial",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-04",
-    "horario": "15:09",
+    "datahora": "2026-11-23",
+    "horario": "18:44",
     "potes": {
-      "1": "AMANTEIGADO LEITE COBERTO",
-      "2": "AMANTEIGADO LEITE CAPRICCHE",
-      "3": "AMANTEIGADO LEITE CAPRICCHE",
-      "4": "AMANTEIGADO LEITE COBERTO",
-      "5": "AMANTEIGADO LEITE COBERTO"
+      "1": "RECHEADO CHOCOLATE FUTURINHOS",
+      "2": "RECHEADO CHOCOLATE FUTURINHOS",
+      "3": "",
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "Linha 06",
+      "1": "Linha 02",
       "2": "Linha 02",
-      "3": "Linha 02",
-      "4": "Linha 06",
-      "5": "Linha 06"
+      "3": "",
+      "4": "",
+      "5": ""
     }
   },
   "BlocoADM": {
