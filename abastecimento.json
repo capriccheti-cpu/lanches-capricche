@@ -254,18 +254,18 @@
   "Expedição": {
     "setor": "Expedição",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-11-04",
-    "horario": "18:04",
+    "datahora": "2026-11-26",
+    "horario": "18:13",
     "potes": {
-      "1": "COOKIES BAUNILHA COBERTO",
-      "2": "COOKIES BAUNILHA COM CHOCOLATE CAPRICCHE",
+      "1": "ROSQUINHA COCO CAPRICCHE",
+      "2": "WAFER BLACK CAPRISHOW",
       "3": "",
       "4": "",
       "5": ""
     },
     "linhas": {
-      "1": "Linha 06",
-      "2": "Linha 04",
+      "1": "Linha 04",
+      "2": "L. Wafer",
       "3": "",
       "4": "",
       "5": ""
