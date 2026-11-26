@@ -490,5 +490,25 @@
       "4": "Linha 04",
       "5": ""
     }
+  },
+  "Estoque PCP": {
+    "setor": "Estoque PCP",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-11-04",
+    "horario": "18:21",
+    "potes": {
+      "1": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "2": "AMANTEIGADO CERELICIA CACAU E CEREAIS",
+      "3": "RECHEADO BLACK MORANGO FUTURINHOS",
+      "4": "AMANTEIGADO LEITE COBERTO ED. ESPECIAL",
+      "5": "CREAM CRACKER INTEGRAL"
+    },
+    "linhas": {
+      "1": "Linha 06",
+      "2": "Linha 02",
+      "3": "Linha 02",
+      "4": "Linha 06",
+      "5": "Linha 03"
+    }
   }
 }
