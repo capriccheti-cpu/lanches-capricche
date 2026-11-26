@@ -470,5 +470,25 @@
       "4": "",
       "5": ""
     }
+  },
+  "ADM Industrial": {
+    "setor": "ADM Industrial",
+    "abastecedor": "Augusto Monte da Silva",
+    "datahora": "2026-11-22",
+    "horario": "18:20",
+    "potes": {
+      "1": "AMANTEIGADO CERELICIA CACAU AVEIA E MEL",
+      "2": "RECHEADO MORANGO FUTURINHOS",
+      "3": "COOKIES BAUNILHA COBERTO",
+      "4": "BLACK COOKIES CAPRICCHE",
+      "5": ""
+    },
+    "linhas": {
+      "1": "Linha 02",
+      "2": "Linha 02",
+      "3": "Linha 06",
+      "4": "Linha 04",
+      "5": ""
+    }
   }
 }
