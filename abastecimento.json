@@ -254,21 +254,21 @@
   "Expedição": {
     "setor": "Expedição",
     "abastecedor": "Augusto Monte da Silva",
-    "datahora": "2026-07-08",
-    "horario": "22:57",
+    "datahora": "2026-11-04",
+    "horario": "18:04",
     "potes": {
-      "1": "MAMMA MIA GERGELIM 20x301,5g",
-      "2": "",
+      "1": "COOKIES BAUNILHA COBERTO",
+      "2": "COOKIES BAUNILHA COM CHOCOLATE CAPRICCHE",
       "3": "",
-      "4": "CREAM CRACKER PREMIUM 20X301,5G",
-      "5": "MAMMAMIA RECHEADO PIZZA 21X93,3"
+      "4": "",
+      "5": ""
     },
     "linhas": {
-      "1": "LinhaW01",
-      "2": "",
+      "1": "Linha 06",
+      "2": "Linha 04",
       "3": "",
-      "4": "LinhaW02",
-      "5": "LinhaW01"
+      "4": "",
+      "5": ""
     }
   },
   "Bloco Social": {
